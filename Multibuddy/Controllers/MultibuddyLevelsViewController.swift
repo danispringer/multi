@@ -1,5 +1,5 @@
 //
-//  BingoLevelsViewController.swift
+//  MultibuddyLevelsViewController.swift
 //  Multibuddy
 //
 //  Created by Daniel Springer on 10/16/22.
@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegate {
+class MultibuddyLevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
 
     // MARK: Outlets
@@ -25,7 +25,7 @@ class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegat
 
     // MARK: Properties
 
-    var myThemeColor: UIColor = .systemPurple
+    var myThemeColor: UIColor = .magenta
     var completedLevelsArray: [Int]!
 
 
@@ -62,7 +62,7 @@ class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegat
         super.viewWillAppear(animated)
 
         let completedLevelsString: String = ud.string(
-            forKey: Const.completedBingoLevels) ?? ""
+            forKey: Const.completedMultibuddyLevels) ?? ""
         let completedLevelsArrayTemp = completedLevelsString.split(separator: ",")
         completedLevelsArray = completedLevelsArrayTemp.map { Int($0)! }
     }
@@ -95,7 +95,7 @@ class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegat
         }
         ud.removeObject(forKey: Const.levelIndexKey)
 
-        if restoredLevelIndex >= Const.bingoLevelsCount {
+        if restoredLevelIndex >= Const.levelsCount {
             let alert = createAlert(alertReasonParam: .lastLevelCompleted)
             present(alert, animated: true)
             return false
@@ -108,8 +108,8 @@ class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegat
     @objc func showSettings() {
 
         let settingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-            withIdentifier: Const.bingoSettingsViewController)
-        as! BingoSettingsViewController
+            withIdentifier: Const.multiBuddySettingsViewController)
+        as! MultibuddySettingsViewController
 
         present(settingsVC, animated: true)
     }
@@ -119,7 +119,7 @@ class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegat
 
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return Const.bingoLevelsCount
+        return Const.levelsCount
     }
 
 
@@ -128,7 +128,7 @@ class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegat
 
         let isLevelCompleted = completedLevelsArray.contains(indexPath.row)
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: Const.bingoLevelCell)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Const.aLevelCell)
         as! LevelTableViewCell
         cell.selectionStyle = .none
         cell.levelNumberLabel.text = "⭐️ Level \(indexPath.row + 1)"
@@ -149,14 +149,14 @@ class BingoLevelsViewController: UITableViewController, RemoteTableReloadDelegat
 
 
     func showLevelFor(_ indexPath: IndexPath) {
-        let bingoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-            withIdentifier: Const.bingoViewController) as! BingoViewController
-        bingoVC.levelNumberIndex = indexPath.row
+        let multiBuddyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+            withIdentifier: Const.multibuddyViewController) as! MultibuddyViewController
+        multiBuddyVC.levelNumberIndex = indexPath.row
         let levelMaxNumber = Const.rangeAddedPerLevel * (indexPath.row + 1)
-        bingoVC.numbersRange = 1...levelMaxNumber
-        bingoVC.myThemeColor = myThemeColor
-        bingoVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
-        self.navigationController!.pushViewController(bingoVC, animated: true)
+        multiBuddyVC.numbersRange = 1...levelMaxNumber
+        multiBuddyVC.myThemeColor = myThemeColor
+        multiBuddyVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
+        self.navigationController!.pushViewController(multiBuddyVC, animated: true)
     }
 
 
@@ -250,7 +250,7 @@ protocol RemoteTableReloadDelegate: AnyObject {
 }
 
 
-extension BingoLevelsViewController: MFMailComposeViewControllerDelegate {
+extension MultibuddyLevelsViewController: MFMailComposeViewControllerDelegate {
 
     func sendEmailTapped() {
         let mailComposeViewController = configuredMailComposeViewController()
@@ -296,7 +296,7 @@ extension BingoLevelsViewController: MFMailComposeViewControllerDelegate {
 }
 
 
-extension BingoLevelsViewController {
+extension MultibuddyLevelsViewController {
 
 
     func requestReview() {

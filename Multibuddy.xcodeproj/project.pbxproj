@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		330F6B052910A8360010F437 /* BingoSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F6B042910A8360010F437 /* BingoSettingsViewController.swift */; };
+		330F6B052910A8360010F437 /* MultibuddySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F6B042910A8360010F437 /* MultibuddySettingsViewController.swift */; };
 		3319089320E8772E007C679C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3319089120E8772E007C679C /* Main.storyboard */; };
 		3319089520E87731007C679C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3319089420E87731007C679C /* Assets.xcassets */; };
 		3319089820E87731007C679C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3319089620E87731007C679C /* LaunchScreen.storyboard */; };
 		3327AD3621DD97B300A0B604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319088D20E8772E007C679C /* AppDelegate.swift */; };
 		33364BED2906696F00427C5C /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33364BEC2906696F00427C5C /* UIButton+Extensions.swift */; };
-		334453EB28FC0A6200CC00E2 /* BingoLevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334453EA28FC0A6200CC00E2 /* BingoLevelsViewController.swift */; };
+		334453EB28FC0A6200CC00E2 /* MultibuddyLevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334453EA28FC0A6200CC00E2 /* MultibuddyLevelsViewController.swift */; };
 		334453ED28FC0EFB00CC00E2 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334453EC28FC0EFB00CC00E2 /* LevelTableViewCell.swift */; };
 		3386A10A281A27B5009FCB7F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386A109281A27B5009FCB7F /* UIFont+Extensions.swift */; };
 		338BC9E528FC5573008FCA90 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338BC9E428FC5573008FCA90 /* UILabel+Extensions.swift */; };
 		3392B0DC288D114500EE9525 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392B0DB288D114500EE9525 /* UIView+Extensions.swift */; };
 		33CF6B8D26F4434A002E5CA9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF6B8C26F4434A002E5CA9 /* UIViewController+Extensions.swift */; };
-		33DB100D28EEB051001083A4 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB100C28EEB051001083A4 /* BingoViewController.swift */; };
+		33DB100D28EEB051001083A4 /* MultibuddyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB100C28EEB051001083A4 /* MultibuddyViewController.swift */; };
 		33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E32B9D288B4DA200CED09C /* Array+Extensions.swift */; };
 		33ECBA0621AC1BAA003199CB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBA0521AC1BAA003199CB /* Const.swift */; };
 		33F3218B28384B2100385BBD /* MultibuddyScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3218A28384B2100385BBD /* MultibuddyScreenshots.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		330F6B042910A8360010F437 /* BingoSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoSettingsViewController.swift; sourceTree = "<group>"; };
+		330F6B042910A8360010F437 /* MultibuddySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultibuddySettingsViewController.swift; sourceTree = "<group>"; };
 		3319088A20E8772E007C679C /* Multibuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multibuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3319088D20E8772E007C679C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3319089220E8772E007C679C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,14 +47,14 @@
 		3319089920E87731007C679C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332FCFE3289B8DE000D3C733 /* Multibuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Multibuddy.entitlements; sourceTree = "<group>"; };
 		33364BEC2906696F00427C5C /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
-		334453EA28FC0A6200CC00E2 /* BingoLevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoLevelsViewController.swift; sourceTree = "<group>"; };
+		334453EA28FC0A6200CC00E2 /* MultibuddyLevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultibuddyLevelsViewController.swift; sourceTree = "<group>"; };
 		334453EC28FC0EFB00CC00E2 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
 		3386A109281A27B5009FCB7F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		338BC9E428FC5573008FCA90 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		3392B0DB288D114500EE9525 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		33C6167127C4985400EC8575 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		33CF6B8C26F4434A002E5CA9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		33DB100C28EEB051001083A4 /* BingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingoViewController.swift; sourceTree = "<group>"; };
+		33DB100C28EEB051001083A4 /* MultibuddyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultibuddyViewController.swift; sourceTree = "<group>"; };
 		33E32B9D288B4DA200CED09C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		33ECBA0521AC1BAA003199CB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		33F3218828384B2100385BBD /* MultibuddyScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultibuddyScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,9 +134,9 @@
 		3340755820E8C33500EFDAA9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				334453EA28FC0A6200CC00E2 /* BingoLevelsViewController.swift */,
-				33DB100C28EEB051001083A4 /* BingoViewController.swift */,
-				330F6B042910A8360010F437 /* BingoSettingsViewController.swift */,
+				334453EA28FC0A6200CC00E2 /* MultibuddyLevelsViewController.swift */,
+				33DB100C28EEB051001083A4 /* MultibuddyViewController.swift */,
+				330F6B042910A8360010F437 /* MultibuddySettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -330,14 +330,14 @@
 				3386A10A281A27B5009FCB7F /* UIFont+Extensions.swift in Sources */,
 				338BC9E528FC5573008FCA90 /* UILabel+Extensions.swift in Sources */,
 				33CF6B8D26F4434A002E5CA9 /* UIViewController+Extensions.swift in Sources */,
-				330F6B052910A8360010F437 /* BingoSettingsViewController.swift in Sources */,
+				330F6B052910A8360010F437 /* MultibuddySettingsViewController.swift in Sources */,
 				3392B0DC288D114500EE9525 /* UIView+Extensions.swift in Sources */,
 				33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */,
 				33ECBA0621AC1BAA003199CB /* Const.swift in Sources */,
-				33DB100D28EEB051001083A4 /* BingoViewController.swift in Sources */,
+				33DB100D28EEB051001083A4 /* MultibuddyViewController.swift in Sources */,
 				33364BED2906696F00427C5C /* UIButton+Extensions.swift in Sources */,
 				3327AD3621DD97B300A0B604 /* AppDelegate.swift in Sources */,
-				334453EB28FC0A6200CC00E2 /* BingoLevelsViewController.swift in Sources */,
+				334453EB28FC0A6200CC00E2 /* MultibuddyLevelsViewController.swift in Sources */,
 				334453ED28FC0EFB00CC00E2 /* LevelTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

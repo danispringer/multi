@@ -17,7 +17,7 @@ class MultibuddyScreenshots: XCTestCase {
 
     var app: XCUIApplication!
 
-    let aList = [Const.shabbosGameName]
+    let aList = [Const.appName]
 
 
     override func setUpWithError() throws {
@@ -36,30 +36,30 @@ class MultibuddyScreenshots: XCTestCase {
         XCTAssertTrue(aThing.waitForExistence(timeout: 5))
         aThing.tap()
         switch word {
-            case Const.shabbosGameName:
+            case Const.appName:
                 XCTAssertTrue(app.staticTexts["⭐️ Level 1"].firstMatch
                     .waitForExistence(timeout: 5))
-                takeScreenshot(named: "2-\(Const.shabbosGameName)-levels")
+                takeScreenshot(named: "2-\(Const.appName)-levels")
                 XCTAssertTrue(app.staticTexts["⭐️ Level 2"].firstMatch
                     .waitForExistence(timeout: 5))
                 app.staticTexts["⭐️ Level 2"].firstMatch.tap()
                 for _ in 0...4 {
-                    XCTAssertTrue(app.buttons["\(Const.notBingoMessage)"].firstMatch
+                    XCTAssertTrue(app.buttons["\(Const.noMessageGame)"].firstMatch
                         .waitForExistence(timeout: 5))
-                    app.buttons["\(Const.notBingoMessage)"].firstMatch.tap()
+                    app.buttons["\(Const.noMessageGame)"].firstMatch.tap()
                 }
-                XCTAssertTrue(app.buttons[Const.shabbosGameName].firstMatch
+                XCTAssertTrue(app.buttons[Const.appName].firstMatch
                     .waitForExistence(timeout: 5))
-                XCTAssertTrue(app.buttons["\(Const.notBingoMessage)"].firstMatch
+                XCTAssertTrue(app.buttons["\(Const.noMessageGame)"].firstMatch
                     .waitForExistence(timeout: 5))
-                takeScreenshot(named: "3-\(Const.shabbosGameName)-game-middle")
+                takeScreenshot(named: "3-\(Const.appName)-game-middle")
                 XCTAssertTrue(app.buttons["OK"].firstMatch
                     .waitForExistence(timeout: 25))
                 app.buttons["OK"].firstMatch.tap()
 
-                XCTAssertTrue(app.buttons[Const.shabbosGameName].firstMatch
+                XCTAssertTrue(app.buttons[Const.appName].firstMatch
                     .waitForExistence(timeout: 5))
-                app.buttons[Const.shabbosGameName].firstMatch.tap()
+                app.buttons[Const.appName].firstMatch.tap()
                 app.buttons["Multibuddy"].firstMatch.tap()
             default:
                 fatalError()

@@ -1,5 +1,5 @@
 //
-//  BingoSettingsViewController.swift
+//  MultibuddySettingsViewController.swift
 //  Multibuddy
 //
 //  Created by Daniel Springer on 10/31/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BingoSettingsViewController: UIViewController {
+class MultibuddySettingsViewController: UIViewController {
 
     // MARK: Outlets
 
@@ -32,10 +32,10 @@ class BingoSettingsViewController: UIViewController {
         What number do you want to practice the multiples of today?
         Choose your number below (you can always change this later)
 
-        Next time you play, your goal will be to spot the multiples of \
+        Next time you play, your goal will be to spot the multiples of: \
         \(ud.integer(forKey: Const.base))
 
-        (You can always see this tutorial later: tap "Settings" on the home page of the app
+        (To see this tutorial later, tap "Settings" on the home page of the app)
         """
     }
 

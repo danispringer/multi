@@ -1,5 +1,5 @@
 //
-//  BingoViewController.swift
+//  MultibuddyViewController.swift
 //  Multibuddy
 //
 //  Created by Daniel Springer on 10/6/22.
@@ -9,14 +9,14 @@
 import UIKit
 import GameKit
 
-class BingoViewController: UIViewController {
+class MultibuddyViewController: UIViewController {
 
     // MARK: Outlets
 
     @IBOutlet weak var numberLabel: UILabel!
 
-    @IBOutlet weak var bingoButton: UIButton!
-    @IBOutlet weak var notBingoButton: UIButton!
+    @IBOutlet weak var isMultipleButton: UIButton!
+    @IBOutlet weak var notMultipleButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timerProgress: UIProgressView!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -87,7 +87,7 @@ class BingoViewController: UIViewController {
             UIView.setAnimationsEnabled(false)
         }
 
-        self.title = "\(Const.shabbosGameName): Level \(levelNumberIndex+1)"
+        self.title = "\(Const.appName): Level \(levelNumberIndex+1)"
         numberLabel.text = " "
         scoreLabel.text = "Score: 0"
         livesLeftLabel.text = "Lives left: " + String(repeating: "\n❤️", count: livesLeft)
@@ -100,8 +100,8 @@ class BingoViewController: UIViewController {
 
         timerLabel.text = "\(timeLeftPre)00:\(Int(Const.timerSeconds))"
 
-        bingoButton.setTitleNew(Const.shabbosGameName)
-        notBingoButton.setTitleNew(Const.noMessage)
+        isMultipleButton.setTitleNew(Const.yesMessage)
+        notMultipleButton.setTitleNew(Const.noMessageGame)
     }
 
 
@@ -110,8 +110,7 @@ class BingoViewController: UIViewController {
 
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
 
-        bingoButton.doGlowAnimation(withColor: myThemeColor)
-        //        notBingoButton.doGlowAnimation(withColor: myThemeColor)
+        isMultipleButton.doGlowAnimation(withColor: myThemeColor)
         startPreTimer()
     }
 
@@ -215,24 +214,24 @@ class BingoViewController: UIViewController {
             return
         }
 
-        let isBingo = currentNumber % 7 == 0
+        let isMultiple = currentNumber % ud.integer(forKey: Const.base) == 0
 
-        // bingo tag is 0
-        if isBingo && sender.tag == 0 {
-            self.showToast(message: "\(Const.shabbosGameName.uppercased())! 2x BONUS!",
+        // yesButton tag is 0
+        if isMultiple && sender.tag == 0 {
+            self.showToast(message: "\(Const.appName.uppercased())! 2x BONUS!",
                            color: myThemeColor)
             score += Const.pointsPerTap * 2
             showNextNumber()
-        } else if !isBingo && sender.tag == 1 {
+        } else if !isMultiple && sender.tag == 1 {
             self.showToast(message: "\(correctMessages.randomElement()!)!".uppercased(),
                            color: .systemGreen)
             score += Const.pointsPerTap
             showNextNumber()
-        } else if isBingo && sender.tag == 1 {
+        } else if isMultiple && sender.tag == 1 {
             removeALife()
             shakeAndShow()
             self.showToast(message: "Oops", color: .systemGray)
-        } else if !isBingo && sender.tag == 0 {
+        } else if !isMultiple && sender.tag == 0 {
             removeALife()
             shakeAndShow()
             self.showToast(message: "Oops", color: .systemGray)
@@ -267,12 +266,12 @@ class BingoViewController: UIViewController {
                                     secondsUsed: Int(initialTime-runsLeft),
                                     livesLeft: livesLeft)
                 var completedLevelsString: String = ud.value(
-                    forKey: Const.completedBingoLevels) as! String
+                    forKey: Const.completedMultibuddyLevels) as! String
                 var completedLevelsArray = completedLevelsString.split(separator: ",")
                 if !completedLevelsArray.contains("\(levelNumberIndex!)") {
                     completedLevelsArray.append("\(levelNumberIndex!)")
                     completedLevelsString = completedLevelsArray.joined(separator: ",")
-                    ud.set(completedLevelsString, forKey: Const.completedBingoLevels)
+                    ud.set(completedLevelsString, forKey: Const.completedMultibuddyLevels)
                     remoteDelegate?.reload()
                 }
         }
@@ -305,8 +304,9 @@ class BingoViewController: UIViewController {
         toggleUI(enable: false)
         currentNumber = numbersDistribution.nextInt()
         let myAttrText = attrifyString(
-            preString: "Will number\n", toAttrify: "\(currentNumber)",
-            postString: "be \(Const.shabbosGameName)?", color: myThemeColor)
+            preString: "Is\n", toAttrify: "\(currentNumber)",
+            postString: "a multiple of \(ud.integer(forKey: Const.base))?",
+            color: myThemeColor)
         numberLabel.attributedText = myAttrText
         self.toggleUI(enable: true)
     }
@@ -314,7 +314,7 @@ class BingoViewController: UIViewController {
 
     func toggleUI(enable: Bool) {
         DispatchQueue.main.async {
-            for button: UIButton in [self.bingoButton, self.notBingoButton] {
+            for button: UIButton in [self.isMultipleButton, self.notMultipleButton] {
                 button.isHidden = !enable
             }
         }
