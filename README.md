@@ -1,4 +1,3 @@
-![logo](https://github.com/DaniSpringer/multibuddy/blob/master/Multibuddy/Assets/Assets.xcassets/AppIcon.appiconset/star-icon-guess.jpg?raw=true&sanitize=true)
 # Multibuddy
 - Have Fun Learning Time Tables
 ***
