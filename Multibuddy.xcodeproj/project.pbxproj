@@ -22,7 +22,7 @@
 		33DB100D28EEB051001083A4 /* BingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB100C28EEB051001083A4 /* BingoViewController.swift */; };
 		33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E32B9D288B4DA200CED09C /* Array+Extensions.swift */; };
 		33ECBA0621AC1BAA003199CB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBA0521AC1BAA003199CB /* Const.swift */; };
-		33F3218B28384B2100385BBD /* MatheeScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3218A28384B2100385BBD /* MatheeScreenshots.swift */; };
+		33F3218B28384B2100385BBD /* MultibuddyScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3218A28384B2100385BBD /* MultibuddyScreenshots.swift */; };
 		33F3219428384F9600385BBD /* screenshots.sh in Resources */ = {isa = PBXBuildFile; fileRef = 33F3219328384F9600385BBD /* screenshots.sh */; };
 		33F4B87A2A073B0A0074AC91 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBA0521AC1BAA003199CB /* Const.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		33E32B9D288B4DA200CED09C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		33ECBA0521AC1BAA003199CB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		33F3218828384B2100385BBD /* MultibuddyScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultibuddyScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		33F3218A28384B2100385BBD /* MatheeScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatheeScreenshots.swift; sourceTree = "<group>"; };
+		33F3218A28384B2100385BBD /* MultibuddyScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultibuddyScreenshots.swift; sourceTree = "<group>"; };
 		33F3219328384F9600385BBD /* screenshots.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = screenshots.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +174,7 @@
 		33F3218928384B2100385BBD /* MultibuddyScreenshots */ = {
 			isa = PBXGroup;
 			children = (
-				33F3218A28384B2100385BBD /* MatheeScreenshots.swift */,
+				33F3218A28384B2100385BBD /* MultibuddyScreenshots.swift */,
 				33F3219328384F9600385BBD /* screenshots.sh */,
 			);
 			path = MultibuddyScreenshots;
@@ -346,7 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F3218B28384B2100385BBD /* MatheeScreenshots.swift in Sources */,
+				33F3218B28384B2100385BBD /* MultibuddyScreenshots.swift in Sources */,
 				33F4B87A2A073B0A0074AC91 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

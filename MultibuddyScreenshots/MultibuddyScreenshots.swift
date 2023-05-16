@@ -17,7 +17,7 @@ class MultibuddyScreenshots: XCTestCase {
 
     var app: XCUIApplication!
 
-    let aList = [Const.shabbosGameName, "Guess It", "Spot It"]
+    let aList = [Const.shabbosGameName]
 
 
     override func setUpWithError() throws {
@@ -60,30 +60,6 @@ class MultibuddyScreenshots: XCTestCase {
                 XCTAssertTrue(app.buttons[Const.shabbosGameName].firstMatch
                     .waitForExistence(timeout: 5))
                 app.buttons[Const.shabbosGameName].firstMatch.tap()
-                app.buttons["Multibuddy"].firstMatch.tap()
-            case "Guess It":
-                XCTAssertTrue(app.buttons["OK"].firstMatch.waitForExistence(timeout: 5))
-                takeScreenshot(named: "4-Guess-it-think")
-                app.buttons["OK"].firstMatch.tap()
-                takeScreenshot(named: "5-Guess-it-multiply")
-                app.buttons["OK"].firstMatch.tap()
-                app.buttons["Even"].firstMatch.tap()
-                app.buttons["OK"].firstMatch.tap() // /2 1
-                app.buttons["OK"].firstMatch.tap() // x3 2
-                app.buttons["Odd"].firstMatch.tap()
-                app.buttons["OK"].firstMatch.tap() // add 1
-                app.buttons["OK"].firstMatch.tap() // /2 2
-                app.textFields.firstMatch.typeText("6")
-                app.buttons["Guess my number"].firstMatch.tap()
-                takeScreenshot(named: "6-Guess-it-result")
-                app.buttons["Done"].firstMatch.tap()
-            case "Spot It":
-                XCTAssertTrue(app.buttons["OK"].firstMatch.waitForExistence(timeout: 5))
-                app.buttons["OK"].firstMatch.tap()
-                app.buttons["Yes"].firstMatch.tap()
-                app.buttons["Yes"].firstMatch.tap()
-                app.buttons["Yes"].firstMatch.tap()
-                takeScreenshot(named: "1-Spot-it")
                 app.buttons["Multibuddy"].firstMatch.tap()
             default:
                 fatalError()
