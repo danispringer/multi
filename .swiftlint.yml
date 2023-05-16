@@ -1,0 +1,14 @@
+vertical_whitespace:
+  max_empty_lines: 2
+
+line_length:
+  warning: 96
+
+disabled_rules:
+  - file_length
+  - type_body_length
+  - function_body_length
+  - cyclomatic_complexity
+  - force_cast
+  - switch_case_alignment
+  - comment_spacing
