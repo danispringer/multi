@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // TODO:
-    // let user choose base for shabbosNameGame
     // remove/update storing of completed levels
     // show at end of level what user got wrong/right (maybe also track quickest
     // solves etc)
@@ -32,12 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if CommandLine.arguments.contains("--multibuddyScreenshots") {
                     // We are in testing mode, make arrangements
                     ud.set(true, forKey: Const.userSawSettings)
-                    ud.set("", forKey: Const.completedMultibuddyLevels)
+                    ud.set("", forKey: Const.completedLevels)
                 }
 
                 ud.register(defaults: [
                     Const.userSawSettings: false,
-                    Const.completedMultibuddyLevels: "",
+                    Const.completedLevels: "",
                     Const.base: 7
                 ])
 

@@ -1,5 +1,5 @@
 //
-//  MultibuddyLevelsViewController.swift
+//  LevelsViewController.swift
 //  Multibuddy
 //
 //  Created by Daniel Springer on 10/16/22.
@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class MultibuddyLevelsViewController: UITableViewController, RemoteTableReloadDelegate {
+class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
 
     // MARK: Outlets
@@ -20,7 +20,7 @@ class MultibuddyLevelsViewController: UITableViewController, RemoteTableReloadDe
 
     // MARK: Properties
 
-    let menuCell = "somecell"
+//    let menuCell = "somecell"
 
 
     // MARK: Properties
@@ -62,7 +62,7 @@ class MultibuddyLevelsViewController: UITableViewController, RemoteTableReloadDe
         super.viewWillAppear(animated)
 
         let completedLevelsString: String = ud.string(
-            forKey: Const.completedMultibuddyLevels) ?? ""
+            forKey: Const.completedLevels) ?? ""
         let completedLevelsArrayTemp = completedLevelsString.split(separator: ",")
         completedLevelsArray = completedLevelsArrayTemp.map { Int($0)! }
     }
@@ -108,8 +108,8 @@ class MultibuddyLevelsViewController: UITableViewController, RemoteTableReloadDe
     @objc func showSettings() {
 
         let settingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-            withIdentifier: Const.multiBuddySettingsViewController)
-        as! MultibuddySettingsViewController
+            withIdentifier: Const.settingsViewController)
+        as! SettingsViewController
 
         present(settingsVC, animated: true)
     }
@@ -149,14 +149,14 @@ class MultibuddyLevelsViewController: UITableViewController, RemoteTableReloadDe
 
 
     func showLevelFor(_ indexPath: IndexPath) {
-        let multiBuddyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-            withIdentifier: Const.multibuddyViewController) as! MultibuddyViewController
-        multiBuddyVC.levelNumberIndex = indexPath.row
+        let aLevelVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+            withIdentifier: Const.aLevelViewController) as! ALevelViewController
+        aLevelVC.levelNumberIndex = indexPath.row
         let levelMaxNumber = Const.rangeAddedPerLevel * (indexPath.row + 1)
-        multiBuddyVC.numbersRange = 1...levelMaxNumber
-        multiBuddyVC.myThemeColor = myThemeColor
-        multiBuddyVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
-        self.navigationController!.pushViewController(multiBuddyVC, animated: true)
+        aLevelVC.numbersRange = 1...levelMaxNumber
+        aLevelVC.myThemeColor = myThemeColor
+        aLevelVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
+        self.navigationController!.pushViewController(aLevelVC, animated: true)
     }
 
 
@@ -250,7 +250,7 @@ protocol RemoteTableReloadDelegate: AnyObject {
 }
 
 
-extension MultibuddyLevelsViewController: MFMailComposeViewControllerDelegate {
+extension LevelsViewController: MFMailComposeViewControllerDelegate {
 
     func sendEmailTapped() {
         let mailComposeViewController = configuredMailComposeViewController()
@@ -296,7 +296,7 @@ extension MultibuddyLevelsViewController: MFMailComposeViewControllerDelegate {
 }
 
 
-extension MultibuddyLevelsViewController {
+extension LevelsViewController {
 
 
     func requestReview() {

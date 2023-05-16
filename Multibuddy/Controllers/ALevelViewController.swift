@@ -1,5 +1,5 @@
 //
-//  MultibuddyViewController.swift
+//  ALevelViewController.swift
 //  Multibuddy
 //
 //  Created by Daniel Springer on 10/6/22.
@@ -9,7 +9,7 @@
 import UIKit
 import GameKit
 
-class MultibuddyViewController: UIViewController {
+class ALevelViewController: UIViewController {
 
     // MARK: Outlets
 
@@ -266,12 +266,12 @@ class MultibuddyViewController: UIViewController {
                                     secondsUsed: Int(initialTime-runsLeft),
                                     livesLeft: livesLeft)
                 var completedLevelsString: String = ud.value(
-                    forKey: Const.completedMultibuddyLevels) as! String
+                    forKey: Const.completedLevels) as! String
                 var completedLevelsArray = completedLevelsString.split(separator: ",")
                 if !completedLevelsArray.contains("\(levelNumberIndex!)") {
                     completedLevelsArray.append("\(levelNumberIndex!)")
                     completedLevelsString = completedLevelsArray.joined(separator: ",")
-                    ud.set(completedLevelsString, forKey: Const.completedMultibuddyLevels)
+                    ud.set(completedLevelsString, forKey: Const.completedLevels)
                     remoteDelegate?.reload()
                 }
         }

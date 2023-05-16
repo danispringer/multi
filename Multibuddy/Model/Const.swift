@@ -29,9 +29,9 @@ struct Const {
     static let oddMessage = "Odd"
     static let evenMessage = "Even"
     static let shareTitleMessage = "Tell a friend"
-    static let multiBuddyLevelsViewController = "MultibuddyLevelsViewController"
-    static let multibuddyViewController = "MultibuddyViewController"
-    static let multiBuddySettingsViewController = "MultibuddySettingsViewController"
+    static let levelsViewController = "LevelsViewController"
+    static let aLevelViewController = "aLevelViewController"
+    static let settingsViewController = "SettingsViewController"
     static let yesMessage = "Yes"
     static let noMessageGame = "Nope"
     static let aLevelCell = "levelCell"
@@ -39,15 +39,15 @@ struct Const {
     // UserDefaults
     static let userSawSettings = "userSawSettings"
     static let levelIndexKey = "levelIndexKey"
-    static let completedMultibuddyLevels = "completedMultibuddyLevels"
-    static let base = "shabbosBase"
+    static let completedLevels = "completedLevels"
+    static let base = "base"
 
     static let pointsPerTap = 1
     static let timerSeconds: Float = 40
-    static let levelsCount = 20
-    static let rangeAddedPerLevel = 10
+    static let levelsCount = 10
+    static let rangeAddedPerLevel = 20
     static let livesPerLevel = 4
     static let pointsGoal = 20
-    static let shabbosBaseOptions = Array(1...10)
+    static let baseOptions = Array(1...20)
 
 }
