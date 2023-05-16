@@ -20,7 +20,7 @@ struct Const {
     static let emailString = "00.segue_affix@icloud.com"
     static let cancel = "Cancel"
     static let leaveReview = "Leave a review"
-    static let reviewLink = "https://apps.apple.com/app/id1406084758?action=write-review"
+    static let reviewLink = "https://apps.apple.com/app/id6449202900?action=write-review"
     static let showAppsButtonTitle = "More apps"
     static let appsLink = "https://apps.apple.com/developer/id1402417666"
     static let okMessage = "OK"

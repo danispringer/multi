@@ -251,7 +251,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Here should be the settings. If you see this message, please let us know..." adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5o-tg-gC1">
-                                <rect key="frame" x="16" y="148" width="361" height="335"/>
+                                <rect key="frame" x="16" y="148.00000000000003" width="361" height="276.66666666666674"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -267,12 +267,19 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaT-Df-acs">
-                                <rect key="frame" x="-16" y="499" width="393" height="216"/>
+                                <rect key="frame" x="16" y="440.66666666666674" width="361" height="216"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="QEw-JE-PA3" id="hCW-PX-Dng"/>
                                     <outlet property="delegate" destination="QEw-JE-PA3" id="7Wy-CF-JBn"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="base here. if you see this please let use know. you are not supposed to see this..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-BJ-vWE">
+                                <rect key="frame" x="16" y="688.66666666666663" width="361" height="42.333333333333371"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bMB-xI-l5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -281,19 +288,23 @@
                             <constraint firstItem="YSa-7w-t96" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="centerX" constant="8" id="4sW-1W-RU8"/>
                             <constraint firstItem="L5o-tg-gC1" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="leading" constant="16" id="5VW-DD-kUx"/>
                             <constraint firstItem="cle-pQ-en9" firstAttribute="top" secondItem="bMB-xI-l5o" secondAttribute="top" constant="16" id="6mt-xV-Bi1"/>
-                            <constraint firstItem="YSa-7w-t96" firstAttribute="top" secondItem="GaT-Df-acs" secondAttribute="bottom" constant="32" id="DxE-bI-hE6"/>
+                            <constraint firstItem="Sj6-BJ-vWE" firstAttribute="top" secondItem="GaT-Df-acs" secondAttribute="bottom" constant="32" id="BXW-Po-AgG"/>
                             <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="L5o-tg-gC1" secondAttribute="trailing" constant="16" id="INJ-Vp-hiC"/>
                             <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="YSa-7w-t96" secondAttribute="trailing" constant="16" id="MRK-pI-xCf"/>
                             <constraint firstItem="YSa-7w-t96" firstAttribute="bottom" secondItem="bMB-xI-l5o" secondAttribute="bottom" constant="-16" id="Rq3-VQ-leo"/>
+                            <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="Sj6-BJ-vWE" secondAttribute="trailing" constant="16" id="YCJ-oA-UWy"/>
                             <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cle-pQ-en9" secondAttribute="trailing" constant="16" id="Z5L-7X-R4F"/>
-                            <constraint firstItem="bMB-xI-l5o" firstAttribute="leading" secondItem="GaT-Df-acs" secondAttribute="leading" constant="16" id="jUN-zS-BuK"/>
+                            <constraint firstItem="bMB-xI-l5o" firstAttribute="leading" secondItem="GaT-Df-acs" secondAttribute="leading" constant="-16" id="jUN-zS-BuK"/>
+                            <constraint firstItem="YSa-7w-t96" firstAttribute="top" secondItem="Sj6-BJ-vWE" secondAttribute="bottom" constant="16" id="ncG-6H-j5s"/>
                             <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="GaT-Df-acs" secondAttribute="trailing" constant="16" id="qDG-K6-hxV"/>
                             <constraint firstItem="L5o-tg-gC1" firstAttribute="top" secondItem="cle-pQ-en9" secondAttribute="bottom" constant="32" id="v3M-7I-gkc"/>
                             <constraint firstItem="cle-pQ-en9" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="leading" constant="16" id="yKE-gr-pjX"/>
+                            <constraint firstItem="Sj6-BJ-vWE" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="leading" constant="16" id="zdU-ts-dM6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="basePickerView" destination="GaT-Df-acs" id="S91-Nh-wuh"/>
+                        <outlet property="helperLabel" destination="Sj6-BJ-vWE" id="fwN-Ag-B95"/>
                         <outlet property="okButton" destination="YSa-7w-t96" id="Vbv-Jm-VvJ"/>
                         <outlet property="settingsTextView" destination="L5o-tg-gC1" id="wcF-20-VNf"/>
                     </connections>
@@ -307,6 +318,9 @@
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

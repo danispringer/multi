@@ -14,8 +14,9 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // MARK: Outlets
 
     @IBOutlet weak var settingsTextView: UITextView!
-    @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var basePickerView: UIPickerView!
+    @IBOutlet weak var helperLabel: UILabel!
+    @IBOutlet weak var okButton: UIButton!
 
 
     // MARK: Life Cycle
@@ -25,13 +26,25 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
         // TODO: update text: proofread
 
-        refreshTextView()
+        settingsTextView.text = """
+        Hey there, welcome! 😊
+
+        \(Const.appName) is here to help you know your times table like the back of \
+        your hands! 🖐️
+
+        What number do you want to practice the multiples of today? Choose below. 🔎
+        """
+
+        refreshHelperLabel()
 
         let fakeRowIndex = ud.integer(forKey: Const.base) - 2
         // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
 
         basePickerView.selectRow(fakeRowIndex, inComponent: 0,
                                  animated: false)
+
+        basePickerView.layer.cornerRadius = 10
+        basePickerView.layer.masksToBounds = true
 
     }
 
@@ -50,15 +63,8 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
 
 
-    func refreshTextView() {
-        settingsTextView.text = """
-        Hey there, welcome! 😊
-
-        \(Const.appName) is here to help you know your times table like the back of \
-        your hands! 🖐️
-
-        What number do you want to practice the multiples of today? Choose below. 🔎
-
+    func refreshHelperLabel() {
+        helperLabel.text = """
         Next time you play, your goal will be to spot the multiples of: \
         \(ud.integer(forKey: Const.base)) 💪
         """
@@ -86,7 +92,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int,
                     inComponent component: Int) {
         ud.set(Const.baseOptions[row], forKey: Const.base)
-        refreshTextView()
+        refreshHelperLabel()
     }
 
 }
