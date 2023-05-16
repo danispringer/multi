@@ -43,11 +43,11 @@ struct Const {
     static let base = "base"
 
     static let pointsPerTap = 1
-    static let timerSeconds: Float = 40
+    static let timerSeconds: Float = 60
     static let levelsCount = 10
     static let rangeAddedPerLevel = 20
     static let livesPerLevel = 4
     static let pointsGoal = 20
-    static let baseOptions = Array(2...12)
+    static let baseOptions = Array(2...10)
 
 }

@@ -98,7 +98,7 @@ extension UIViewController {
             case .lastLevelCompleted:
                 alertTitle = "👑 WOW! You did it! 🎉"
                 alertMessage = """
-                You have completed all \(Const.levelsCount) levels!
+                You have completed the highest level!
                 """
             case .timeUp:
                 alertTitle = "⏰ Game Over ⏰"
