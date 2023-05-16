@@ -12,8 +12,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
 
     // MARK: Outlets
-
-    @IBOutlet weak var settingsTextView: UITextView!
+    @IBOutlet weak var staticLabel: UILabel!
     @IBOutlet weak var basePickerView: UIPickerView!
     @IBOutlet weak var helperLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
@@ -24,9 +23,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // TODO: update text: proofread
-
-        settingsTextView.text = """
+        staticLabel.text = """
         Hey there, welcome! 😊
 
         \(Const.appName) is here to help you know your times table like the back of \
@@ -46,13 +43,6 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         basePickerView.layer.cornerRadius = 10
         basePickerView.layer.masksToBounds = true
 
-    }
-
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        settingsTextView.flashScrollIndicators()
     }
 
 

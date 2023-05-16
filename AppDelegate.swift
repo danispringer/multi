@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // TODO:
-    // remove/update storing of completed levels
-    // show at end of level what user got wrong/right (maybe also track quickest
-    // solves etc)
-    // music and sound effects
+    // SORTED by priority
+    // 1. remove/update storing of completed levels
+    // 2. music and sound effects
+    // 3. show at end of level what user got wrong/right
 
 
     // MARK: Life Cycle
