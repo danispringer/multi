@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -206,11 +205,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
                     <state key="normal" title="How To Play?" image="info.circle" catalog="system"/>
-                    <buttonConfiguration key="configuration" style="gray" imagePlacement="trailing" title="Help" imagePadding="4">
-                        <imageReference key="image" image="gear" catalog="system" symbolScale="default"/>
-                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                        </preferredSymbolConfiguration>
+                    <buttonConfiguration key="configuration" style="gray" title="Help">
                         <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                     </buttonConfiguration>
                 </button>
@@ -218,10 +213,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" image="ellipsis.circle" catalog="system" imagePlacement="trailing" title="About" imagePadding="4">
-                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                        </preferredSymbolConfiguration>
+                    <buttonConfiguration key="configuration" style="gray" title="Info 🤔">
                         <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                     </buttonConfiguration>
                 </button>
@@ -312,8 +304,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
-        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

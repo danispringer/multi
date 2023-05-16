@@ -48,6 +48,6 @@ struct Const {
     static let rangeAddedPerLevel = 20
     static let livesPerLevel = 4
     static let pointsGoal = 20
-    static let baseOptions = Array(1...20)
+    static let baseOptions = Array(2...12)
 
 }

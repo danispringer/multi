@@ -27,7 +27,8 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
         refreshTextView()
 
-        let fakeRowIndex = ud.integer(forKey: Const.base) - 1 // cuz row 0 has value "1"
+        let fakeRowIndex = ud.integer(forKey: Const.base) - 2
+        // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
 
         basePickerView.selectRow(fakeRowIndex, inComponent: 0,
                                  animated: false)
@@ -51,17 +52,15 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
     func refreshTextView() {
         settingsTextView.text = """
-        Hey, welcome! 😊
+        Hey there, welcome! 😊
 
-        \(Const.appName) is here to help you know your times table like the back of your hands!
+        \(Const.appName) is here to help you know your times table like the back of \
+        your hands! 🖐️
 
-        What number do you want to practice the multiples of today?
-        Choose your number below (you can always change this later)
+        What number do you want to practice the multiples of today? Choose below. 🔎
 
         Next time you play, your goal will be to spot the multiples of: \
-        \(ud.integer(forKey: Const.base))
-
-        (To see this tutorial later, tap "Settings" on the home page of the app)
+        \(ud.integer(forKey: Const.base)) 💪
         """
     }
 

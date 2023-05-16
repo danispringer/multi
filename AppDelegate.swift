@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // remove/update storing of completed levels
     // show at end of level what user got wrong/right (maybe also track quickest
     // solves etc)
+    // music and sound effects
+
 
     // MARK: Life Cycle
 

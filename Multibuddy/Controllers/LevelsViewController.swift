@@ -47,7 +47,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         settingsButton.addTarget(self, action: #selector(showSettings),
                              for: .touchUpInside)
 
-        settingsButton.setTitleNew("Settings")
+        settingsButton.setTitleNew("Settings ⚙️")
 
 
         let settingsItem = UIBarButtonItem(customView: settingsButton)
