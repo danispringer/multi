@@ -17,10 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // TODO:
-    // SORTED by priority
-    // show tricks for each multiple
-    // music and sound effects
+    // show tips for each multiple
     // show at end of level what user got wrong/right
+    // music and sound effects
     // let users reset done levels (unless no longer marked as done)
 
 
