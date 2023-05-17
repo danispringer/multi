@@ -17,6 +17,7 @@ struct Const {
     static let version = "v."
     static let appName = "Multibuddy"
     static let contact = "Email me"
+    static let tips = "Tips & Tricks"
     static let emailString = "00.segue_affix@icloud.com"
     static let cancel = "Cancel"
     static let leaveReview = "Leave a review"
@@ -31,21 +32,18 @@ struct Const {
     static let shareTitleMessage = "Tell a friend"
     static let levelsViewController = "LevelsViewController"
     static let aLevelViewController = "aLevelViewController"
-    static let settingsViewController = "SettingsViewController"
     static let yesMessage = "Yes"
     static let noMessageGame = "Nope"
     static let aLevelCell = "levelCell"
 
     // UserDefaults
-    static let userSawSettings = "userSawSettings"
     static let levelIndexKey = "levelIndexKey"
     static let completedLevels = "completedLevels"
-    static let base = "base"
 
     static let pointsPerTap = 1
-    static let timerSeconds: Float = 60
-    static let levelsCount = 10
-    static let rangeAddedPerLevel = 20
+    static let timerSeconds: Float = 59
+    //    static let levelsCount = 10
+    //    static let rangeAddedPerLevel = 20
     static let livesPerLevel = 4
     static let pointsGoal = 20
     static let baseOptions = Array(2...10)

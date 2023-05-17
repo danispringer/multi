@@ -48,6 +48,8 @@ class ALevelViewController: UIViewController {
         "wonderful"
     ]
 
+    var myBase: Int!
+
     var currentNumber = 0
     var myThemeColor: UIColor!
     var myGameTimer: Timer!
@@ -87,7 +89,7 @@ class ALevelViewController: UIViewController {
             UIView.setAnimationsEnabled(false)
         }
 
-        self.title = "\(Const.appName): Level \(levelNumberIndex+1)"
+        self.title = "Spot Multiples of: \(myBase!)"
         numberLabel.text = " "
         scoreLabel.text = "Score: 0"
         livesLeftLabel.text = "Lives left: " + String(repeating: "\n❤️", count: livesLeft)
@@ -214,7 +216,7 @@ class ALevelViewController: UIViewController {
             return
         }
 
-        let isMultiple = currentNumber % ud.integer(forKey: Const.base) == 0
+        let isMultiple = currentNumber % myBase == 0
 
         // yesButton tag is 0
         if isMultiple && sender.tag == 0 {
@@ -305,7 +307,7 @@ class ALevelViewController: UIViewController {
         currentNumber = numbersDistribution.nextInt()
         let myAttrText = attrifyString(
             preString: "Is\n", toAttrify: "\(currentNumber)",
-            postString: "a multiple of \(ud.integer(forKey: Const.base))?",
+            postString: "a multiple of \(myBase!)?",
             color: myThemeColor)
         numberLabel.attributedText = myAttrText
         self.toggleUI(enable: true)

@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     // TODO:
     // SORTED by priority
-    // 1. remove/update storing of completed levels
-    // 2. music and sound effects
-    // 3. show at end of level what user got wrong/right
+    // show tricks for each multiple
+    // music and sound effects
+    // show at end of level what user got wrong/right
+    // let users reset done levels (unless no longer marked as done)
 
 
     // MARK: Life Cycle
@@ -32,14 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                 if CommandLine.arguments.contains("--multibuddyScreenshots") {
                     // We are in testing mode, make arrangements
-                    ud.set(true, forKey: Const.userSawSettings)
                     ud.set("", forKey: Const.completedLevels)
                 }
 
                 ud.register(defaults: [
-                    Const.userSawSettings: false,
-                    Const.completedLevels: "",
-                    Const.base: 7
+                    Const.completedLevels: ""
                 ])
 
                 return true

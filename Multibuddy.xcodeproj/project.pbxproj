@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		330F6B052910A8360010F437 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330F6B042910A8360010F437 /* SettingsViewController.swift */; };
 		3319089320E8772E007C679C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3319089120E8772E007C679C /* Main.storyboard */; };
 		3319089520E87731007C679C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3319089420E87731007C679C /* Assets.xcassets */; };
 		3319089820E87731007C679C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3319089620E87731007C679C /* LaunchScreen.storyboard */; };
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		330F6B042910A8360010F437 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3319088A20E8772E007C679C /* Multibuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multibuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3319088D20E8772E007C679C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3319089220E8772E007C679C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 			children = (
 				334453EA28FC0A6200CC00E2 /* LevelsViewController.swift */,
 				33DB100C28EEB051001083A4 /* ALevelViewController.swift */,
-				330F6B042910A8360010F437 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -330,7 +327,6 @@
 				3386A10A281A27B5009FCB7F /* UIFont+Extensions.swift in Sources */,
 				338BC9E528FC5573008FCA90 /* UILabel+Extensions.swift in Sources */,
 				33CF6B8D26F4434A002E5CA9 /* UIViewController+Extensions.swift in Sources */,
-				330F6B052910A8360010F437 /* SettingsViewController.swift in Sources */,
 				3392B0DC288D114500EE9525 /* UIView+Extensions.swift in Sources */,
 				33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */,
 				33ECBA0621AC1BAA003199CB /* Const.swift in Sources */,

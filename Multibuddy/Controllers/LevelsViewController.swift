@@ -14,13 +14,12 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
     // MARK: Outlets
 
-    @IBOutlet var settingsButton: UIButton!
     @IBOutlet var aboutButton: UIButton!
 
 
     // MARK: Properties
 
-//    let menuCell = "somecell"
+    //    let menuCell = "somecell"
 
 
     // MARK: Properties
@@ -44,16 +43,9 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         setThemeColorTo(myThemeColor: myThemeColor)
 
-        settingsButton.addTarget(self, action: #selector(showSettings),
-                             for: .touchUpInside)
-
-        settingsButton.setTitleNew("Settings ⚙️")
-
-
-        let settingsItem = UIBarButtonItem(customView: settingsButton)
         let aboutItem = UIBarButtonItem(customView: aboutButton)
 
-        navigationItem.rightBarButtonItems = [aboutItem, settingsItem]
+        navigationItem.rightBarButtonItems = [aboutItem]
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
@@ -78,11 +70,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             return
         }
 
-        if !ud.bool(forKey: Const.userSawSettings) {
-            showSettings()
-            ud.set(true, forKey: Const.userSawSettings)
-        }
-
     }
 
 
@@ -95,7 +82,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         }
         ud.removeObject(forKey: Const.levelIndexKey)
 
-        if restoredLevelIndex >= Const.levelsCount {
+        if restoredLevelIndex >= Const.baseOptions.count {
             let alert = createAlert(alertReasonParam: .lastLevelCompleted)
             present(alert, animated: true)
             return false
@@ -105,21 +92,16 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     }
 
 
-    @objc func showSettings() {
-
-        let settingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
-            withIdentifier: Const.settingsViewController)
-        as! SettingsViewController
-
-        present(settingsVC, animated: true)
-    }
-
-
     // MARK: Delegates
 
     override func tableView(_ tableView: UITableView,
+                            titleForHeaderInSection section: Int) -> String? {
+        return "What Number Do You Want to Practice the Multiples of Today?"
+    }
+
+    override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return Const.levelsCount
+        return Const.baseOptions.count
     }
 
 
@@ -128,18 +110,24 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         let isLevelCompleted = completedLevelsArray.contains(indexPath.row)
 
+        let fakeIndexPathRow = indexPath.row + 2
+        // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
+
         let cell = tableView.dequeueReusableCell(withIdentifier: Const.aLevelCell)
         as! LevelTableViewCell
         cell.selectionStyle = .none
-        cell.levelNumberLabel.text = "⭐️ Level \(indexPath.row + 1)"
+        cell.mainLabel.text = """
+        Spot Multiples of \(fakeIndexPathRow)
+        """
+
         if isLevelCompleted {
             cell.fakeBackgroundView.backgroundColor = .systemGreen
         } else {
             cell.fakeBackgroundView.backgroundColor = myThemeColor
         }
-        let levelMaxNumber = Const.rangeAddedPerLevel * (indexPath.row + 1)
-        cell.numbersRangeLabel.text = """
-        Numbers 1-\(levelMaxNumber)
+
+        cell.secondaryLabel.text = """
+        \(String(repeating: "⭐️", count: fakeIndexPathRow))
         """
 
         cell.fakeBackgroundView.layer.cornerRadius = 8
@@ -152,8 +140,11 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         let aLevelVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
             withIdentifier: Const.aLevelViewController) as! ALevelViewController
         aLevelVC.levelNumberIndex = indexPath.row
-        let levelMaxNumber = Const.rangeAddedPerLevel * (indexPath.row + 1)
-        aLevelVC.numbersRange = 1...levelMaxNumber
+        let fakeIndexPathRow = indexPath.row + 2
+        let levelMaxNumber = 10 * fakeIndexPathRow
+        // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
+        aLevelVC.numbersRange = fakeIndexPathRow...levelMaxNumber
+        aLevelVC.myBase = fakeIndexPathRow
         aLevelVC.myThemeColor = myThemeColor
         aLevelVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
         self.navigationController!.pushViewController(aLevelVC, animated: true)
@@ -210,6 +201,12 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             self.sendEmailTapped()
         }
 
+        let tipsAction = UIAction(title: Const.tips,
+                                   image: UIImage(systemName: "brain.head.profile"),
+                                   state: .off) { _ in
+            self.tipsTapped()
+        }
+
 
         let version: String? = Bundle.main.infoDictionary![Const.appVersion] as? String
         var myTitle = Const.appName
@@ -219,7 +216,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         let infoMenu = UIMenu(title: myTitle, image: nil, identifier: .none,
                               options: .displayInline,
-                              children: [emailAction, review, shareApp, moreApps])
+                              children: [tipsAction, emailAction, review, shareApp, moreApps])
         return infoMenu
     }
 
@@ -233,6 +230,11 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             return
         }
         UIApplication.shared.open(safeURL, options: [:], completionHandler: nil)
+    }
+
+
+    func tipsTapped() {
+        // show tips for each base
     }
 
 

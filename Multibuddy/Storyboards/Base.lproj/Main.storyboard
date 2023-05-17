@@ -135,7 +135,7 @@
         <scene sceneID="Sbo-VO-xJl">
             <objects>
                 <tableViewController storyboardIdentifier="LevelsViewController" title="Multibuddy" id="TNP-sy-QeK" customClass="LevelsViewController" customModule="Multibuddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="5dZ-VR-elh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5dZ-VR-elh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -151,14 +151,14 @@
                                             <rect key="frame" x="16" y="15.999999999999993" width="321" height="107.33333333333331"/>
                                             <color key="backgroundColor" systemColor="tintColor"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Level 3" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ3-KF-GQr" userLabel="Level Number Label">
-                                            <rect key="frame" x="31.999999999999993" y="31.999999999999996" width="86.333333333333314" height="33.666666666666657"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Spot Multiples of 7" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ3-KF-GQr" userLabel="Level Number Label">
+                                            <rect key="frame" x="32" y="31.999999999999996" width="225" height="33.666666666666657"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Numbers: 1 to 35" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XH-aP-rxe" userLabel="Numbers Range Label">
-                                            <rect key="frame" x="32" y="73.666666666666671" width="162.66666666666666" height="33.666666666666671"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="⭐️⭐️⭐️⭐️⭐️⭐️⭐️" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XH-aP-rxe" userLabel="Numbers Range Label">
+                                            <rect key="frame" x="32" y="73.666666666666671" width="182" height="33.666666666666671"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -181,8 +181,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="fakeBackgroundView" destination="ybQ-5n-1mh" id="EV0-2G-P4C"/>
-                                    <outlet property="levelNumberLabel" destination="YQ3-KF-GQr" id="HF2-mC-mNG"/>
-                                    <outlet property="numbersRangeLabel" destination="1XH-aP-rxe" id="6pk-rc-1hW"/>
+                                    <outlet property="mainLabel" destination="YQ3-KF-GQr" id="HF2-mC-mNG"/>
+                                    <outlet property="secondaryLabel" destination="1XH-aP-rxe" id="6pk-rc-1hW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -196,21 +196,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aboutButton" destination="Zv2-cz-wTm" id="UV8-FD-qvo"/>
-                        <outlet property="settingsButton" destination="pzK-za-kQe" id="Wuv-DI-4Ug"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwG-Dh-xm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pzK-za-kQe">
-                    <rect key="frame" x="0.0" y="0.0" width="128" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
-                    <state key="normal" title="How To Play?" image="info.circle" catalog="system"/>
-                    <buttonConfiguration key="configuration" style="gray" title="Help">
-                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
-                    </buttonConfiguration>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zv2-cz-wTm">
-                    <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
+                    <rect key="frame" x="0.0" y="0.0" width="68" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="gray" title="Info 🤔">
@@ -236,89 +226,8 @@
             </objects>
             <point key="canvasLocation" x="-1049" y="1657"/>
         </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="MgJ-vh-lNj">
-            <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="QEw-JE-PA3" customClass="SettingsViewController" customModule="Multibuddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="k6L-SD-wLA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cle-pQ-en9">
-                                <rect key="frame" x="16.000000000000007" y="75" width="120.66666666666669" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSa-7w-t96">
-                                <rect key="frame" x="204.66666666666663" y="747" width="172.33333333333337" height="55"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="OK">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="hidePressed:" destination="QEw-JE-PA3" eventType="touchUpInside" id="8Uz-4x-ffm"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaT-Df-acs">
-                                <rect key="frame" x="16" y="440.66666666666674" width="361" height="216"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="QEw-JE-PA3" id="hCW-PX-Dng"/>
-                                    <outlet property="delegate" destination="QEw-JE-PA3" id="7Wy-CF-JBn"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="base here. if you see this please let use know. you are not supposed to see this..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-BJ-vWE">
-                                <rect key="frame" x="16" y="672.66666666666663" width="361" height="42.333333333333371"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKK-Zw-dCS">
-                                <rect key="frame" x="16" y="148" width="361" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bMB-xI-l5o"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="YSa-7w-t96" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="centerX" constant="8" id="4sW-1W-RU8"/>
-                            <constraint firstItem="cle-pQ-en9" firstAttribute="top" secondItem="bMB-xI-l5o" secondAttribute="top" constant="16" id="6mt-xV-Bi1"/>
-                            <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="zKK-Zw-dCS" secondAttribute="trailing" constant="16" id="BVX-e9-XDe"/>
-                            <constraint firstItem="Sj6-BJ-vWE" firstAttribute="top" secondItem="GaT-Df-acs" secondAttribute="bottom" constant="16" id="BXW-Po-AgG"/>
-                            <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="YSa-7w-t96" secondAttribute="trailing" constant="16" id="MRK-pI-xCf"/>
-                            <constraint firstItem="YSa-7w-t96" firstAttribute="bottom" secondItem="bMB-xI-l5o" secondAttribute="bottom" constant="-16" id="Rq3-VQ-leo"/>
-                            <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="Sj6-BJ-vWE" secondAttribute="trailing" constant="16" id="YCJ-oA-UWy"/>
-                            <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cle-pQ-en9" secondAttribute="trailing" constant="16" id="Z5L-7X-R4F"/>
-                            <constraint firstItem="zKK-Zw-dCS" firstAttribute="top" secondItem="cle-pQ-en9" secondAttribute="bottom" constant="32" id="h73-AM-41h"/>
-                            <constraint firstItem="bMB-xI-l5o" firstAttribute="leading" secondItem="GaT-Df-acs" secondAttribute="leading" constant="-16" id="jUN-zS-BuK"/>
-                            <constraint firstItem="zKK-Zw-dCS" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="leading" constant="16" id="lwc-Ab-KrX"/>
-                            <constraint firstItem="GaT-Df-acs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zKK-Zw-dCS" secondAttribute="bottom" constant="32" id="nGM-MY-u6z"/>
-                            <constraint firstItem="YSa-7w-t96" firstAttribute="top" secondItem="Sj6-BJ-vWE" secondAttribute="bottom" constant="32" id="ncG-6H-j5s"/>
-                            <constraint firstItem="bMB-xI-l5o" firstAttribute="trailing" secondItem="GaT-Df-acs" secondAttribute="trailing" constant="16" id="qDG-K6-hxV"/>
-                            <constraint firstItem="cle-pQ-en9" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="leading" constant="16" id="yKE-gr-pjX"/>
-                            <constraint firstItem="Sj6-BJ-vWE" firstAttribute="leading" secondItem="bMB-xI-l5o" secondAttribute="leading" constant="16" id="zdU-ts-dM6"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="basePickerView" destination="GaT-Df-acs" id="S91-Nh-wuh"/>
-                        <outlet property="helperLabel" destination="Sj6-BJ-vWE" id="fwN-Ag-B95"/>
-                        <outlet property="okButton" destination="YSa-7w-t96" id="Vbv-Jm-VvJ"/>
-                        <outlet property="staticLabel" destination="zKK-Zw-dCS" id="8yB-b4-o0l"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hz0-hk-y5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-251" y="2354"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

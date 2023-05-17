@@ -10,8 +10,8 @@ import UIKit
 
 class LevelTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var levelNumberLabel: UILabel!
-    @IBOutlet weak var numbersRangeLabel: UILabel!
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var fakeBackgroundView: UIView!
 
 }
