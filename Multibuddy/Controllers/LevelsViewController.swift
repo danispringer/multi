@@ -96,8 +96,9 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
     override func tableView(_ tableView: UITableView,
                             titleForHeaderInSection section: Int) -> String? {
-        return "What Number Do You Want to Practice the Multiples of Today?"
+        return "What Multiples Do You Want to Practice Today?"
     }
+
 
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
