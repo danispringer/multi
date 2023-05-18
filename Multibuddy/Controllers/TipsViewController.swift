@@ -26,7 +26,7 @@ If the sum of the number's digits is a multiple of 3, then the original number i
 a multiple of 3.
 """,
          "example": """
-24 is a multiple of 3 because: 2 + 4 = 6, and 6 is a multiple of 3.
+24 is a multiple of 3 because 2 + 4 = 6, and 6 is a multiple of 3.
 """],
 
         ["tip": """
@@ -66,24 +66,36 @@ The difference between 3 and 10 is 7 (or -7, doesn't matter!)
 """],
 
         ["tip": """
-the tip is to drink tea
+By writing the results for 8x1, 8x2, 8x3, etc, on a paper, with each result written below \
+the previous one, you can notice that the ones digits occur in the sequence: 8, 6, 4, 2, 0, \
+while in the tens place, the numbers increase by 1 (almost) every time.
 """,
          "example": """
-make a tea and drink it
+\n08
+16
+24
+32
+40
+48
+56
+64
+72
+80
 """],
 
         ["tip": """
-the tip is to drink tea
+If the sum of the number's digits is a multiple of 9 (or simply 9), then the original number \
+is also a multiple of 9.
 """,
          "example": """
-make a tea and drink it
+45 is a multiple of 9 because 4 + 5 = 9.
 """],
 
         ["tip": """
-the tip is to drink tea
+If the last digit of the number is 0, the number is divisible by 10.
 """,
          "example": """
-make a tea and drink it
+20, 40, 50, 170, 990...
 """]]
 
 
