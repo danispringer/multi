@@ -109,14 +109,13 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         let isLevelCompleted = completedLevelsArray.contains(indexPath.row)
 
-        let fakeIndexPathRow = indexPath.row + 2
         // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
 
         let cell = tableView.dequeueReusableCell(withIdentifier: Const.aLevelCell)
         as! LevelTableViewCell
         cell.selectionStyle = .none
         cell.mainLabel.text = """
-        Spot Multiples of \(fakeIndexPathRow)
+        Spot Multiples of \(indexPath.row + Const.fakeIndexOffset)
         """
 
         if isLevelCompleted {
@@ -126,7 +125,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         }
 
         cell.secondaryLabel.text = """
-        \(String(repeating: "⭐️", count: fakeIndexPathRow))
+        \(String(repeating: "⭐️", count: indexPath.row + Const.fakeIndexOffset))
         """
 
         cell.fakeBackgroundView.layer.cornerRadius = 8
@@ -139,11 +138,10 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         let aLevelVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
             withIdentifier: Const.aLevelViewController) as! ALevelViewController
         aLevelVC.levelNumberIndex = indexPath.row
-        let fakeIndexPathRow = indexPath.row + 2
-        let levelMaxNumber = 10 * fakeIndexPathRow
+        let levelMaxNumber = 10 * (indexPath.row + Const.fakeIndexOffset)
         // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
-        aLevelVC.numbersRange = fakeIndexPathRow...levelMaxNumber
-        aLevelVC.myBase = fakeIndexPathRow
+        aLevelVC.numbersRange = (indexPath.row + Const.fakeIndexOffset)...levelMaxNumber
+        aLevelVC.myBase = indexPath.row + Const.fakeIndexOffset
         aLevelVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
         self.navigationController!.pushViewController(aLevelVC, animated: true)
     }

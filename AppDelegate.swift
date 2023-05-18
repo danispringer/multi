@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // TODO:
-    // show tips for each multiple
-    // show at end of level what user got wrong/right
+    // show tips for each number
+    // at end of level, show what the user got right/wrong
     // music and sound effects
     // let users reset done levels
 

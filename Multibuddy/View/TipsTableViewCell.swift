@@ -11,6 +11,7 @@ import UIKit
 class TipsTableViewCell: UITableViewCell {
 
 
-    @IBOutlet weak var primaryLabel: UILabel!
-    @IBOutlet weak var secondaryLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var exampleLabel: UILabel!
 }

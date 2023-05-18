@@ -139,24 +139,29 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="RYZ-E5-Whk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tipsCell" id="eaZ-PP-WXi" customClass="TipsTableViewCell" customModule="Multibuddy" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="117.33333587646484"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eaZ-PP-WXi" id="qDi-eo-7e7">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="117.33333587646484"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Tips for number: 7" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlD-pI-o5d">
-                                            <rect key="frame" x="16" y="16" width="321" height="26.666666666666671"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Spot Multiples of: 2" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlD-pI-o5d">
+                                            <rect key="frame" x="16" y="15.999999999999996" width="321" height="33.666666666666657"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="here's a tip to find multiples of number 7 in an easy simple and quick way." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-7c-RAp">
-                                            <rect key="frame" x="16" y="58.666666666666671" width="321" height="42.666666666666671"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Multiples of 2 will always in end in 2, 4, 6, 8 (or 0)." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-7c-RAp">
+                                            <rect key="frame" x="16" y="65.666666666666671" width="321" height="42.666666666666671"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example, if the number ends in 0, it's a multiple of 10." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipB-5b-Rqg">
+                                            <rect key="frame" x="16" y="124.33333333333333" width="321" height="33.666666666666671"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -164,16 +169,20 @@
                                     <constraints>
                                         <constraint firstItem="qlD-pI-o5d" firstAttribute="leading" secondItem="qDi-eo-7e7" secondAttribute="leading" constant="16" id="58d-fZ-x6t"/>
                                         <constraint firstItem="zOd-7c-RAp" firstAttribute="top" secondItem="qlD-pI-o5d" secondAttribute="bottom" constant="16" id="7Y0-6H-eoF"/>
+                                        <constraint firstItem="ipB-5b-Rqg" firstAttribute="leading" secondItem="qDi-eo-7e7" secondAttribute="leading" constant="16" id="Cea-k5-u40"/>
+                                        <constraint firstAttribute="bottom" secondItem="ipB-5b-Rqg" secondAttribute="bottom" constant="32" id="Di0-Wu-zyM"/>
                                         <constraint firstAttribute="trailing" secondItem="zOd-7c-RAp" secondAttribute="trailing" constant="16" id="M23-vn-hkh"/>
                                         <constraint firstAttribute="trailing" secondItem="qlD-pI-o5d" secondAttribute="trailing" constant="16" id="P8K-rL-hkD"/>
                                         <constraint firstItem="zOd-7c-RAp" firstAttribute="leading" secondItem="qDi-eo-7e7" secondAttribute="leading" constant="16" id="WnZ-NN-TYk"/>
-                                        <constraint firstAttribute="bottom" secondItem="zOd-7c-RAp" secondAttribute="bottom" constant="16" id="kKl-Gq-5bn"/>
+                                        <constraint firstAttribute="trailing" secondItem="ipB-5b-Rqg" secondAttribute="trailing" constant="16" id="pXi-uR-Urw"/>
+                                        <constraint firstItem="ipB-5b-Rqg" firstAttribute="top" secondItem="zOd-7c-RAp" secondAttribute="bottom" constant="16" id="tYe-m8-vIO"/>
                                         <constraint firstItem="qlD-pI-o5d" firstAttribute="top" secondItem="qDi-eo-7e7" secondAttribute="top" constant="16" id="yte-yJ-LEP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="primaryLabel" destination="qlD-pI-o5d" id="ojX-CW-js2"/>
-                                    <outlet property="secondaryLabel" destination="zOd-7c-RAp" id="mg5-hZ-1qh"/>
+                                    <outlet property="exampleLabel" destination="ipB-5b-Rqg" id="NAZ-T1-Wh0"/>
+                                    <outlet property="tipLabel" destination="zOd-7c-RAp" id="mg5-hZ-1qh"/>
+                                    <outlet property="titleLabel" destination="qlD-pI-o5d" id="ojX-CW-js2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
