@@ -57,7 +57,8 @@ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Tips"
+        self.title = "Tips 💡"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 
@@ -79,13 +80,16 @@ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         as! TipsTableViewCell
         cell.selectionStyle = .none
         cell.primaryLabel.text = """
-        Tip to spot multiples of: \(fakeIndexPathRow)
+        How to Spot Multiples of: \(fakeIndexPathRow)
         """
 
         cell.secondaryLabel.text = tipsArray[indexPath.row]
 
+        cell.layer.borderColor = myThemeColor.cgColor
+        cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 40
+
         return cell
     }
-
 
 }

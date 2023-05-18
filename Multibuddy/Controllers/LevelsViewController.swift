@@ -20,7 +20,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
     // MARK: Properties
 
-    var myThemeColor: UIColor = .magenta
     var completedLevelsArray: [Int]!
 
 
@@ -145,7 +144,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
         aLevelVC.numbersRange = fakeIndexPathRow...levelMaxNumber
         aLevelVC.myBase = fakeIndexPathRow
-        aLevelVC.myThemeColor = myThemeColor
         aLevelVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
         self.navigationController!.pushViewController(aLevelVC, animated: true)
     }
@@ -228,7 +226,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
 
     @objc func tipsTapped() {
-        // show tips for each base
         let tipsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
             withIdentifier: Const.tipsViewController) as! TipsViewController
         self.navigationController!.pushViewController(tipsVC, animated: true)

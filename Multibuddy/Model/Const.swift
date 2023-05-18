@@ -10,6 +10,7 @@ import UIKit
 
 // swiftlint:disable:next identifier_name
 let ud = UserDefaults.standard
+let myThemeColor: UIColor = .magenta
 
 struct Const {
 
@@ -17,7 +18,6 @@ struct Const {
     static let version = "v."
     static let appName = "Multibuddy"
     static let contact = "Email me"
-    static let tips = "Tips & Tricks"
     static let emailString = "00.segue_affix@icloud.com"
     static let cancel = "Cancel"
     static let leaveReview = "Leave a review"

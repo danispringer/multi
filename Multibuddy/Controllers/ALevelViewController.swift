@@ -51,7 +51,6 @@ class ALevelViewController: UIViewController {
     var myBase: Int!
 
     var currentNumber = 0
-    var myThemeColor: UIColor!
     var myGameTimer: Timer!
     var myPreTimer: Timer!
     var numbersRange: ClosedRange<Int>!
