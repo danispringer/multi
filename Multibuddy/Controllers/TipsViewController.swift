@@ -62,7 +62,7 @@ If the number ends in 0 or 5, then it is a multiple of 5.
         [
             "tip":
 """
-If the number is a multiple of 2 and 3, it is a multiple of 6.
+If the number is a multiple of 2 and 3, then it is a multiple of 6.
 """,
             "example":
 """
@@ -123,7 +123,7 @@ is also a multiple of 9.
         [
             "tip":
 """
-If the number ends in 0, it is a multiple of 10.
+If the number ends in 0, then it is a multiple of 10.
 """,
             "example":
 """
