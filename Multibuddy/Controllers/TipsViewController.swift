@@ -111,8 +111,6 @@ make a tea and drink it
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
-
         let cell = tableView.dequeueReusableCell(withIdentifier: Const.tipsCell)
         as! TipsTableViewCell
         cell.selectionStyle = .none

@@ -109,8 +109,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         let isLevelCompleted = completedLevelsArray.contains(indexPath.row)
 
-        // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
-
         let cell = tableView.dequeueReusableCell(withIdentifier: Const.aLevelCell)
         as! LevelTableViewCell
         cell.selectionStyle = .none
@@ -139,7 +137,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             withIdentifier: Const.aLevelViewController) as! ALevelViewController
         aLevelVC.levelNumberIndex = indexPath.row
         let levelMaxNumber = 10 * (indexPath.row + Const.fakeIndexOffset)
-        // cuz row #1 is index 0 (and since multiples of 1 are irrelevant, we start at "2")
         aLevelVC.numbersRange = (indexPath.row + Const.fakeIndexOffset)...levelMaxNumber
         aLevelVC.myBase = indexPath.row + Const.fakeIndexOffset
         aLevelVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
