@@ -131,6 +131,61 @@
             </objects>
             <point key="canvasLocation" x="575" y="1656"/>
         </scene>
+        <!--Tips View Controller-->
+        <scene sceneID="lQO-v1-OaD">
+            <objects>
+                <tableViewController storyboardIdentifier="TipsViewController" id="M5q-G8-iAc" customClass="TipsViewController" customModule="Multibuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="RYZ-E5-Whk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tipsCell" id="eaZ-PP-WXi" customClass="TipsTableViewCell" customModule="Multibuddy" customModuleProvider="target">
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="117.33333587646484"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eaZ-PP-WXi" id="qDi-eo-7e7">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="117.33333587646484"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Tips for number: 7" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlD-pI-o5d">
+                                            <rect key="frame" x="16" y="16" width="321" height="26.666666666666671"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="here's a tip to find multiples of number 7 in an easy simple and quick way." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOd-7c-RAp">
+                                            <rect key="frame" x="16" y="58.666666666666671" width="321" height="42.666666666666671"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qlD-pI-o5d" firstAttribute="leading" secondItem="qDi-eo-7e7" secondAttribute="leading" constant="16" id="58d-fZ-x6t"/>
+                                        <constraint firstItem="zOd-7c-RAp" firstAttribute="top" secondItem="qlD-pI-o5d" secondAttribute="bottom" constant="16" id="7Y0-6H-eoF"/>
+                                        <constraint firstAttribute="trailing" secondItem="zOd-7c-RAp" secondAttribute="trailing" constant="16" id="M23-vn-hkh"/>
+                                        <constraint firstAttribute="trailing" secondItem="qlD-pI-o5d" secondAttribute="trailing" constant="16" id="P8K-rL-hkD"/>
+                                        <constraint firstItem="zOd-7c-RAp" firstAttribute="leading" secondItem="qDi-eo-7e7" secondAttribute="leading" constant="16" id="WnZ-NN-TYk"/>
+                                        <constraint firstAttribute="bottom" secondItem="zOd-7c-RAp" secondAttribute="bottom" constant="16" id="kKl-Gq-5bn"/>
+                                        <constraint firstItem="qlD-pI-o5d" firstAttribute="top" secondItem="qDi-eo-7e7" secondAttribute="top" constant="16" id="yte-yJ-LEP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="primaryLabel" destination="qlD-pI-o5d" id="ojX-CW-js2"/>
+                                    <outlet property="secondaryLabel" destination="zOd-7c-RAp" id="mg5-hZ-1qh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M5q-G8-iAc" id="YNu-JM-CqD"/>
+                            <outlet property="delegate" destination="M5q-G8-iAc" id="bLG-Yl-muq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiB-mQ-OCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392" y="1656"/>
+        </scene>
         <!--Multibuddy-->
         <scene sceneID="Sbo-VO-xJl">
             <objects>
@@ -196,15 +251,22 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aboutButton" destination="Zv2-cz-wTm" id="UV8-FD-qvo"/>
+                        <outlet property="tipsButton" destination="2wA-V5-5Ow" id="LEv-Mz-o7f"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwG-Dh-xm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zv2-cz-wTm">
-                    <rect key="frame" x="0.0" y="0.0" width="68" height="35"/>
+                    <rect key="frame" x="0.0" y="0.0" width="25" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" title="Info 🤔">
-                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                    <buttonConfiguration key="configuration" style="gray" image="ellipsis.circle" catalog="system"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2wA-V5-5Ow">
+                    <rect key="frame" x="0.0" y="0.0" width="107" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Tips &amp; Tricks 💡">
+                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                     </buttonConfiguration>
                 </button>
             </objects>
@@ -228,6 +290,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

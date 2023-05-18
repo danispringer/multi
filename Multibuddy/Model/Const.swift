@@ -32,9 +32,11 @@ struct Const {
     static let shareTitleMessage = "Tell a friend"
     static let levelsViewController = "LevelsViewController"
     static let aLevelViewController = "aLevelViewController"
+    static let tipsViewController = "TipsViewController"
     static let yesMessage = "Yes"
     static let noMessageGame = "Nope"
     static let aLevelCell = "levelCell"
+    static let tipsCell = "tipsCell"
 
     // UserDefaults
     static let levelIndexKey = "levelIndexKey"
@@ -42,8 +44,6 @@ struct Const {
 
     static let pointsPerTap = 1
     static let timerSeconds: Float = 59
-    //    static let levelsCount = 10
-    //    static let rangeAddedPerLevel = 20
     static let livesPerLevel = 4
     static let pointsGoal = 20
     static let baseOptions = Array(2...10)

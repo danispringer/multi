@@ -15,11 +15,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     // MARK: Outlets
 
     @IBOutlet var aboutButton: UIButton!
-
-
-    // MARK: Properties
-
-    //    let menuCell = "somecell"
+    @IBOutlet var tipsButton: UIButton!
 
 
     // MARK: Properties
@@ -43,9 +39,12 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         setThemeColorTo(myThemeColor: myThemeColor)
 
+        tipsButton.addTarget(self, action: #selector(tipsTapped), for: .touchUpInside)
+        let tipsItem = UIBarButtonItem(customView: tipsButton)
+
         let aboutItem = UIBarButtonItem(customView: aboutButton)
 
-        navigationItem.rightBarButtonItems = [aboutItem]
+        navigationItem.rightBarButtonItems = [aboutItem, tipsItem]
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
@@ -202,12 +201,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             self.sendEmailTapped()
         }
 
-        let tipsAction = UIAction(title: Const.tips,
-                                   image: UIImage(systemName: "brain.head.profile"),
-                                   state: .off) { _ in
-            self.tipsTapped()
-        }
-
 
         let version: String? = Bundle.main.infoDictionary![Const.appVersion] as? String
         var myTitle = Const.appName
@@ -217,7 +210,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         let infoMenu = UIMenu(title: myTitle, image: nil, identifier: .none,
                               options: .displayInline,
-                              children: [tipsAction, emailAction, review, shareApp, moreApps])
+                              children: [emailAction, review, shareApp, moreApps])
         return infoMenu
     }
 
@@ -234,8 +227,11 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     }
 
 
-    func tipsTapped() {
+    @objc func tipsTapped() {
         // show tips for each base
+        let tipsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
+            withIdentifier: Const.tipsViewController) as! TipsViewController
+        self.navigationController!.pushViewController(tipsVC, animated: true)
     }
 
 
