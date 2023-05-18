@@ -87,7 +87,6 @@ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
         cell.layer.borderColor = myThemeColor.cgColor
         cell.layer.borderWidth = 2
-        cell.layer.cornerRadius = 40
 
         return cell
     }
