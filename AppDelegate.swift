@@ -17,10 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // TODO:
-    // show tips for each number
-    // at end of level, show what the user got right/wrong
     // music and sound effects
-    // let users reset done levels
+    // at end of level, show what the user got right/wrong
 
 
     // MARK: Life Cycle

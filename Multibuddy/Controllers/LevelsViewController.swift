@@ -18,11 +18,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     @IBOutlet var tipsButton: UIButton!
 
 
-    // MARK: Properties
-
-    var completedLevelsArray: [Int]!
-
-
     // MARK: Life Cycle
 
     override func viewDidLoad() {
@@ -51,10 +46,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        let completedLevelsString: String = ud.string(
-            forKey: Const.completedLevels) ?? ""
-        let completedLevelsArrayTemp = completedLevelsString.split(separator: ",")
-        completedLevelsArray = completedLevelsArrayTemp.map { Int($0)! }
     }
 
 
@@ -72,6 +63,15 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
 
     // MARK: Helpers
+
+
+    func getCompletedLevels() -> [Int] {
+        let completedLevelsString: String = ud.string(
+            forKey: Const.completedLevels) ?? ""
+        let completedLevelsArrayTemp = completedLevelsString.split(separator: ",")
+        return completedLevelsArrayTemp.map { Int($0)! }
+    }
+
 
     func restoreAndShouldShowHelp() -> Bool {
         guard let restoredLevelIndex: Int = ud.value(
@@ -107,7 +107,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let isLevelCompleted = completedLevelsArray.contains(indexPath.row)
+        let isLevelCompleted = getCompletedLevels().contains(indexPath.row)
 
         let cell = tableView.dequeueReusableCell(withIdentifier: Const.aLevelCell)
         as! LevelTableViewCell
@@ -194,6 +194,11 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             self.sendEmailTapped()
         }
 
+        let resetAction = UIAction(title: Const.reset,
+                                   image: UIImage(systemName: "trash"), state: .off) { _ in
+            self.resetTapped()
+        }
+
 
         let version: String? = Bundle.main.infoDictionary![Const.appVersion] as? String
         var myTitle = Const.appName
@@ -203,7 +208,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         let infoMenu = UIMenu(title: myTitle, image: nil, identifier: .none,
                               options: .displayInline,
-                              children: [emailAction, review, shareApp, moreApps])
+                              children: [emailAction, review, shareApp, moreApps, resetAction])
         return infoMenu
     }
 
@@ -217,6 +222,17 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             return
         }
         UIApplication.shared.open(safeURL, options: [:], completionHandler: nil)
+    }
+
+    func resetTapped() {
+        let alert = createAlert(alertReasonParam: .resetProgress,
+                                okActionString: "Keep progress")
+        let eraseAction = UIAlertAction(title: "Erase progress", style: .destructive) { _ in
+            ud.set("", forKey: Const.completedLevels)
+            self.tableView.reloadData()
+        }
+        alert.addAction(eraseAction)
+        present(alert, animated: true)
     }
 
 
@@ -296,7 +312,6 @@ extension LevelsViewController {
         guard let writeReviewURL = URL(string: Const.reviewLink)
         else {
             fatalError("expected valid URL")
-
         }
         UIApplication.shared.open(
             writeReviewURL,

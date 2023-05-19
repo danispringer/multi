@@ -71,10 +71,11 @@ extension UIViewController {
         case livesUp
         case pointsReached
         case emailError
+        case resetProgress
     }
 
 
-    func createAlert(alertReasonParam: AlertReason,
+    func createAlert(alertReasonParam: AlertReason, okActionString: String = Const.okMessage,
                      levelIndex: Int = 0, points: Int = 0,
                      secondsUsed: Int = 0, livesLeft: Int = 0) -> UIAlertController {
 
@@ -127,6 +128,13 @@ extension UIViewController {
 
                 Lives left: \(String(repeating: "❤️", count: livesLeft))
                 """
+            case .resetProgress:
+                alertTitle = "\(Const.reset)?"
+
+                alertMessage = """
+                Are you sure you want to erase progress? This will reset all levels to \
+                purple/undone
+                """
             default:
                 alertTitle = "Unknown error"
                 alertMessage = """
@@ -136,7 +144,7 @@ extension UIViewController {
 
         let alert = UIAlertController(title: alertTitle, message: alertMessage,
                                       preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        let alertAction = UIAlertAction(title: okActionString, style: .cancel)
         alert.addAction(alertAction)
 
         return alert

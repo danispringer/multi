@@ -18,6 +18,7 @@ struct Const {
     static let version = "v."
     static let appName = "Multibuddy"
     static let contact = "Email me"
+    static let reset = "Erase progress"
     static let emailString = "00.segue_affix@icloud.com"
     static let cancel = "Cancel"
     static let leaveReview = "Leave a review"
