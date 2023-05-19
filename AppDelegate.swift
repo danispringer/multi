@@ -13,12 +13,13 @@ import UIKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
     // MARK: Properties
 
     var window: UIWindow?
     // TODO:
-    // music and sound effects
-    // at end of level, show what the user got right/wrong
+    // music & sound effects
+    // After ending a level, show me what I got right or wrong
 
 
     // MARK: Life Cycle
