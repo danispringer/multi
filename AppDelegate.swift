@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // allow setting lives to endless but with timer (and: without timer?), as in: leaderboard
     //   of high scores in X time, regardless of lives lost (or maybe set to 1 life?)
     // make tips button more noticeable? (glow?) maybe show tips page on first time, maybe more
-    // than once, with "remind me", "don't show again" buttons
+    // than once, with "remind me", "don't show again" buttons.
 
 
     // MARK: Life Cycle
