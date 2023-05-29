@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // TODO: todos
     // show correct multiples more often
-    // fix tips button going past bottom of navbar when navbar is shrunk
+    // ?fix tips button going past bottom of navbar when navbar is shrunk
     // allow setting lives to endless but with timer (and: without timer?), as in: leaderboard
     //   of high scores in X time, regardless of lives lost (or maybe set to 1 life?)
     // make tips button more noticeable? (glow?) maybe show tips page on first time, maybe more
