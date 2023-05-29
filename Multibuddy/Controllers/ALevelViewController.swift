@@ -57,7 +57,8 @@ class ALevelViewController: UIViewController {
     var myGameTimer: Timer!
     var myPreTimer: Timer!
     var numbersRange: ClosedRange<Int>!
-    var numbersDistribution: GKShuffledDistribution!
+    var arrToCustomShuffle: [Int]!
+    var myArrCustomIndex = 0
     var levelNumberIndex: Int!
     var score = 0 {
         didSet {
@@ -99,13 +100,16 @@ class ALevelViewController: UIViewController {
         timerProgress.progress = 0
         toggleUI(enable: false)
 
-        numbersDistribution = GKShuffledDistribution(lowestValue: numbersRange.first!,
-                                                     highestValue: numbersRange.last!)
-
         timerLabel.text = "\(timeLeftPre)00:\(Int(Const.timerSeconds))"
 
         isMultipleButton.setTitleNew(Const.yesMessage)
         notMultipleButton.setTitleNew(Const.noMessageGame)
+
+        arrToCustomShuffle = Array(numbersRange)
+        for num in arrToCustomShuffle where num % myBase == 0 {
+            arrToCustomShuffle.append(contentsOf: Array(repeating: num, count: myBase))
+        }
+        arrToCustomShuffle.shuffle()
     }
 
 
@@ -327,13 +331,23 @@ Incorrect guesses: \(wrongGuessesFormatted)
             return
         }
         toggleUI(enable: false)
-        currentNumber = numbersDistribution.nextInt()
+        currentNumber = returnIntAndStepToNext()
         let myAttrText = attrifyString(
             preString: "Is\n", toAttrify: "\(currentNumber)",
             postString: "a multiple of \(myBase!)?",
             color: myThemeColor)
         numberLabel.attributedText = myAttrText
         self.toggleUI(enable: true)
+    }
+
+
+    func returnIntAndStepToNext() -> Int {
+        if !arrToCustomShuffle.indices.contains(myArrCustomIndex) { // if end of arr
+            myArrCustomIndex = 0
+        }
+        let myInt = arrToCustomShuffle[myArrCustomIndex]
+        myArrCustomIndex+=1
+        return myInt
     }
 
 
