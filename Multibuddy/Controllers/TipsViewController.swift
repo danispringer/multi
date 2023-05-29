@@ -137,11 +137,15 @@ If the number ends in 0, then it is a multiple of 10.
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Tips 💡"
-        navigationController?.navigationBar.prefersLargeTitles = true
-
+        self.title = Const.tipsTitle
         tableView.separatorStyle = .none
+    }
 
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 

@@ -102,14 +102,21 @@ class ALevelViewController: UIViewController {
 
         timerLabel.text = "\(timeLeftPre)00:\(Int(Const.timerSeconds))"
 
-        isMultipleButton.setTitleNew(Const.yesMessage)
-        notMultipleButton.setTitleNew(Const.noMessageGame)
+        isMultipleButton.setTitleNew(Const.yesMessage, font: .largeTitle)
+        notMultipleButton.setTitleNew(Const.noMessageGame, font: .largeTitle)
 
         arrToCustomShuffle = Array(numbersRange)
         for num in arrToCustomShuffle where num % myBase == 0 {
             arrToCustomShuffle.append(contentsOf: Array(repeating: num, count: myBase))
         }
         arrToCustomShuffle.shuffle()
+    }
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+//        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 

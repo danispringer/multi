@@ -27,6 +27,7 @@ struct Const {
     static let appsLink = "https://apps.apple.com/developer/id1402417666"
     static let okMessage = "OK"
     static let correctMessage = "Correct"
+    static let tipsTitle = "💡 Tips"
     static let doneMessage = "Done"
     static let oddMessage = "Odd"
     static let evenMessage = "Even"

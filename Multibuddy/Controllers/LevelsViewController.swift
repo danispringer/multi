@@ -39,12 +39,16 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         let aboutItem = UIBarButtonItem(customView: aboutButton)
 
         navigationItem.rightBarButtonItems = [aboutItem, tipsItem]
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        tipsButton.setTitleNew(Const.tipsTitle, font: .title1)
+
+        tipsButton.doGlowAnimation(withColor: myThemeColor)
+        //        navigationController?.navigationBar.prefersLargeTitles = true
 
     }
 
