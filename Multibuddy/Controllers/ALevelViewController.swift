@@ -50,6 +50,9 @@ class ALevelViewController: UIViewController {
 
     var myBase: Int!
 
+    var correctGuesses: [Int] = []
+    var wrongGuesses: [Int] = []
+
     var currentNumber = 0
     var myGameTimer: Timer!
     var myPreTimer: Timer!
@@ -222,17 +225,21 @@ class ALevelViewController: UIViewController {
             self.showToast(message: "\(Const.appName.uppercased())! 2x BONUS!",
                            color: myThemeColor)
             score += Const.pointsPerTap * 2
+            correctGuesses.append(currentNumber)
             showNextNumber()
         } else if !isMultiple && sender.tag == 1 {
             self.showToast(message: "\(correctMessages.randomElement()!)!".uppercased(),
                            color: .systemGreen)
             score += Const.pointsPerTap
+            correctGuesses.append(currentNumber)
             showNextNumber()
         } else if isMultiple && sender.tag == 1 {
+            wrongGuesses.append(currentNumber)
             removeALife()
             shakeAndShow()
             self.showToast(message: "Oops", color: .systemGray)
         } else if !isMultiple && sender.tag == 0 {
+            wrongGuesses.append(currentNumber)
             removeALife()
             shakeAndShow()
             self.showToast(message: "Oops", color: .systemGray)
@@ -256,6 +263,15 @@ class ALevelViewController: UIViewController {
 
         var alert: UIAlertController!
 
+        var correctGuessesFormatted = correctGuesses.map { String($0) }.joined(separator: ", ")
+        var wrongGuessesFormatted = wrongGuesses.map { String($0) }.joined(separator: ", ")
+        if correctGuessesFormatted.isEmpty {
+            correctGuessesFormatted = "none"
+        }
+        if wrongGuessesFormatted.isEmpty {
+            wrongGuessesFormatted = "none"
+        }
+
         switch reason {
             case .timeUp:
                 alert = createAlert(alertReasonParam: .timeUp, points: score)
@@ -278,6 +294,13 @@ class ALevelViewController: UIViewController {
         }
 
         DispatchQueue.main.async { [self] in
+
+            alert.message?.append(
+"""
+\n\nCorrect guesses: \(correctGuessesFormatted)
+Incorrect guesses: \(wrongGuessesFormatted)
+""")
+
             present(alert, animated: true)
             timerLabel.isHidden = true
             timerLabel.textColor = .label
