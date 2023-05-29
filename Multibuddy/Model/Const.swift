@@ -40,14 +40,14 @@ struct Const {
     static let aLevelCell = "levelCell"
     static let tipsCell = "tipsCell"
 
-    // UserDefaults
+    // MARK: UserDefaults
     static let levelIndexKey = "levelIndexKey"
     static let completedLevels = "completedLevels"
 
     static let pointsPerTap = 100
     static let timerSeconds: Float = 59
     static let livesPerLevel = 4
-    static let pointsGoal = pointsPerTap * 20
+    static let pointsGoal = 20 * pointsPerTap
     static let baseOptions = Array(2...10)
     static let fakeIndexOffset: Int = baseOptions.first!
 

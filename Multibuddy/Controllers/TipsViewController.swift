@@ -142,13 +142,6 @@ If the number ends in 0, then it is a multiple of 10.
     }
 
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
-
     // MARK: TableView Delegate
 
     override func tableView(_ tableView: UITableView,

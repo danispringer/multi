@@ -45,7 +45,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        tipsButton.setTitleNew(Const.tipsTitle, font: .title1)
+        tipsButton.setTitleNew(Const.tipsTitle, font: .title2)
 
         tipsButton.doGlowAnimation(withColor: myThemeColor)
         //        navigationController?.navigationBar.prefersLargeTitles = true

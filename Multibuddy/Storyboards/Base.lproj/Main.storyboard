@@ -275,11 +275,11 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2wA-V5-5Ow">
-                    <rect key="frame" x="0.0" y="0.0" width="92" height="27"/>
+                    <rect key="frame" x="0.0" y="0.0" width="69" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="gray" title="titpsButton">
-                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                     </buttonConfiguration>
                 </button>
             </objects>

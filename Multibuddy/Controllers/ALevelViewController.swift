@@ -113,13 +113,6 @@ class ALevelViewController: UIViewController {
     }
 
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-//        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -278,10 +271,10 @@ class ALevelViewController: UIViewController {
         var correctGuessesFormatted = correctGuesses.map { String($0) }.joined(separator: ", ")
         var wrongGuessesFormatted = wrongGuesses.map { String($0) }.joined(separator: ", ")
         if correctGuessesFormatted.isEmpty {
-            correctGuessesFormatted = "none"
+            correctGuessesFormatted = "😢 None"
         }
         if wrongGuessesFormatted.isEmpty {
-            wrongGuessesFormatted = "none"
+            wrongGuessesFormatted = "😎 None"
         }
 
         switch reason {
