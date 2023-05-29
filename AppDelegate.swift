@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // TODO: todos
     // music & sound effects
+    // lives left -> lives used, with emojis for none, or all but 1 etc
+    // don't show same number twice in a row
+    // accessibility: voice control, voiceover, kid adult boomer
     // ?show tips page - or point to tips button - on first time
     // Improve design of level ended alert
     // ?allow setting difficulty (higher score, less lives, less time)
