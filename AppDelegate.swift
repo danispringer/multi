@@ -19,16 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // TODO: todos
-    // show correct multiples more often
-    // ?fix tips button going past bottom of navbar when navbar is shrunk
-    // allow setting lives to endless but with timer (and: without timer?), as in: leaderboard
-    //   of high scores in X time, regardless of lives lost (or maybe set to 1 life?)
-    // make tips button more noticeable? (glow?) maybe show tips page on first time, maybe more
-    // than once, with "remind me", "don't show again" buttons.
     // music & sound effects
-    // add more levels?
-    // After ending a level, show both r and w? what if empty? improve design
-    // allow setting difficulty (higher score, less lives, less time)
+    // ?show tips page - or point to tips button - on first time
+    // Improve design of level ended alert
+    // ?allow setting difficulty (higher score, less lives, less time)
+    // ?add more levels?
 
 
     // MARK: Life Cycle
