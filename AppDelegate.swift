@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // TODO: todos
-    // allow setting difficulty (higher score, less lives, less time)
     // show correct multiples more often
     // fix tips button going past bottom of navbar when navbar is shrunk
     // allow setting lives to endless but with timer (and: without timer?), as in: leaderboard
@@ -29,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // music & sound effects
     // add more levels?
     // After ending a level, show both r and w? what if empty? improve design
+    // allow setting difficulty (higher score, less lives, less time)
 
 
     // MARK: Life Cycle
