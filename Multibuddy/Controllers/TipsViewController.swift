@@ -138,6 +138,7 @@ If the number ends in 0, then it is a multiple of 10.
         super.viewDidLoad()
 
         self.title = Const.tipsTitle
+        self.accessibilityLabel = emojiless(original: Const.tipsTitle)
         tableView.separatorStyle = .none
     }
 
@@ -156,17 +157,19 @@ If the number ends in 0, then it is a multiple of 10.
         let cell = tableView.dequeueReusableCell(withIdentifier: Const.tipsCell)
         as! TipsTableViewCell
         cell.selectionStyle = .none
-        cell.titleLabel.text = """
-        Multiples of \(indexPath.row + Const.fakeIndexOffset)
-        """
 
-        cell.tipLabel.text = """
-        ✅ \(tipsDict[indexPath.row]["tip"]!)
-        """
+        let rawTitleLabel = "Multiples of \(indexPath.row + Const.fakeIndexOffset)"
+        cell.titleLabel.text = isVOOn ? emojiless(original: rawTitleLabel) : rawTitleLabel
+        cell.titleLabel.accessibilityLabel = emojiless(original: cell.titleLabel.text!)
 
-        cell.exampleLabel.text = """
-        📝 \(tipsDict[indexPath.row]["example"]!)
-        """
+        let rawTipLabelText = "✅ \(tipsDict[indexPath.row]["tip"]!)"
+        cell.tipLabel.text = isVOOn ? emojiless(original: rawTipLabelText)
+        : rawTipLabelText
+        cell.tipLabel.accessibilityLabel = emojiless(original: cell.tipLabel.text!)
+
+        let rawExampleText = "📝 \(tipsDict[indexPath.row]["example"]!)"
+        cell.exampleLabel.text = isVOOn ? emojiless(original: rawExampleText) : rawExampleText
+        cell.exampleLabel.accessibilityLabel = emojiless(original: cell.exampleLabel.text!)
 
         return cell
     }

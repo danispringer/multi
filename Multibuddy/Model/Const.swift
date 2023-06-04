@@ -11,6 +11,7 @@ import UIKit
 // swiftlint:disable:next identifier_name
 let ud = UserDefaults.standard
 let myThemeColor: UIColor = .magenta
+let isVOOn = UIAccessibility.isVoiceOverRunning
 
 struct Const {
 
@@ -27,7 +28,7 @@ struct Const {
     static let appsLink = "https://apps.apple.com/developer/id1402417666"
     static let okMessage = "OK"
     static let correctMessage = "Correct"
-    static let tipsTitle = "💡 Tips"
+    static let tipsTitle = isVOOn ? "Tips" : "💡 Tips"
     static let doneMessage = "Done"
     static let oddMessage = "Odd"
     static let evenMessage = "Even"

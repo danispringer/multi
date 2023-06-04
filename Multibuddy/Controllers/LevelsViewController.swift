@@ -46,6 +46,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         super.viewWillAppear(animated)
 
         tipsButton.setTitleNew(Const.tipsTitle, font: .title2)
+        tipsButton.accessibilityLabel = emojiless(original: Const.tipsTitle)
 
         tipsButton.doGlowAnimation(withColor: myThemeColor)
         //        navigationController?.navigationBar.prefersLargeTitles = true
@@ -141,6 +142,8 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         """
 
         cell.fakeBackgroundView.layer.cornerRadius = 8
+
+        cell.accessibilityLabel = "Level \(indexPath.row + Const.fakeIndexOffset)"
 
         return cell
     }

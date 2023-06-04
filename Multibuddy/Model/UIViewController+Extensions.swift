@@ -83,6 +83,7 @@ extension UIViewController {
 
         var alertTitle = ""
         var alertMessage = ""
+
         switch alertReasonParam {
             case .emailError:
                 alertTitle = "Email Not Sent"
@@ -99,12 +100,14 @@ extension UIViewController {
                 Highest number allowed: \(UInt64.max/4)
                 """
             case .lastLevelCompleted:
-                alertTitle = "👑 WOW! You did it! 🎉"
+                let myTitle = "👑 WOW! You did it! 🎉"
+                alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
                 alertMessage = """
                 You have completed the highest level!
                 """
             case .timeUp:
-                alertTitle = "⏰ Game Over ⏰"
+                let myTitle = "⏰ Game Over ⏰"
+                alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
                 alertMessage = """
                 Time is up.
                 You reached \(points) points.
@@ -112,7 +115,8 @@ extension UIViewController {
                 Try again!
                 """
             case .livesUp:
-                alertTitle = "💔 Game Over 💔"
+                let myTitle = "💔 Game Over 💔"
+                alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
                 alertMessage = """
                 No more Lives.
                 You reached \(points) points.
@@ -120,25 +124,31 @@ extension UIViewController {
                 Try again!
                 """
             case .pointsReached:
-                alertTitle = "🎉 You Won! 🎊"
+                let myTitle = "🎉 You Won! 🎊"
+                alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
                 let secondSeconds = secondsUsed == 1 ? "second" : "seconds"
+                let livesLeftMessage = String(repeating: "❤️", count: livesLeft)
                 alertMessage = """
                 You reached \(Const.pointsGoal) points and successfully completed Level \
                 \(levelIndex+1)
 
                 Time used: \(secondsUsed) \(secondSeconds)
 
-                Lives left: \(String(repeating: "❤️", count: livesLeft))
+                Lives left: \(isVOOn ? "\(livesLeft)" :
+                String(repeating: "❤️", count: livesLeft))
                 """
             case .resetProgress:
                 alertTitle = "\(Const.reset)?"
-
-                alertMessage = """
+                alertMessage = isVOOn ? """
+                Are you sure you want to erase progress? This will reset all levels to \
+                undone
+""" : """
                 Are you sure you want to erase progress? This will reset all levels to \
                 purple/undone
                 """
             case .splash:
-                alertTitle = "👋☺️ Welcome"
+                let myTitle = "👋☺️ Welcome"
+                alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
 
                 alertMessage = """
                 This app will help you learn timetables while having fun!
@@ -180,6 +190,10 @@ extension UIViewController {
         }, completion: { _ in // completed in
             toastLabel.removeFromSuperview()
         })
+    }
+
+    func emojiless(original: String) -> String {
+        return original.filter { $0.isASCII }
     }
 
 }

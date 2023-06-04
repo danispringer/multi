@@ -93,9 +93,12 @@ class ALevelViewController: UIViewController {
         }
 
         self.title = "Spot Multiples of: \(myBase!)"
+
+        timerProgress.accessibilityElementsHidden = true
         numberLabel.text = " "
         scoreLabel.text = "Score: 0"
-        livesLeftLabel.text = "Lives left: " + String(repeating: "\n❤️", count: livesLeft)
+        let livesLabelRawLabel = "Lives left: " + String(repeating: "\n❤️", count: livesLeft)
+        livesLeftLabel.text = isVOOn ? "Lives left: \(livesLeft)" : livesLabelRawLabel
         setThemeColorTo(myThemeColor: myThemeColor)
         timerProgress.progress = 0
         toggleUI(enable: false)
@@ -146,7 +149,12 @@ class ALevelViewController: UIViewController {
     func startPreTimer() {
         timerProgress.setProgress(1, animated: true)
         var runsLeft: Float = 2
-        let messages = ["🔴🔴 Ready 🔴🔴", "🟡🟡 Set 🟡🟡", "🟢🟢 Go! 🟢🟢"]
+        let rawMessages = ["🔴🔴 Ready 🔴🔴", "🟡🟡 Set 🟡🟡", "🟢🟢 Go! 🟢🟢"]
+        var messages: [String] = []
+        for message in rawMessages {
+            messages.append(isVOOn ? emojiless(original: message) : message)
+        }
+
         var messageIndex = 0
         showToast(message: messages[messageIndex], color: .systemBlue)
         messageIndex += 1
@@ -254,7 +262,8 @@ class ALevelViewController: UIViewController {
 
     func removeALife() {
         livesLeft-=1
-        livesLeftLabel.text = "Lives left: " + String(repeating: "\n❤️", count: livesLeft)
+        let rawLivesLeft = "Lives left: " + String(repeating: "\n❤️", count: livesLeft)
+        livesLeftLabel.text = isVOOn ? "Lives left: \(livesLeft)" : rawLivesLeft
         guard livesLeft > 0 else {
             endGameWith(reason: .livesUp)
             return
@@ -271,10 +280,10 @@ class ALevelViewController: UIViewController {
         var correctGuessesFormatted = correctGuesses.map { String($0) }.joined(separator: ", ")
         var wrongGuessesFormatted = wrongGuesses.map { String($0) }.joined(separator: ", ")
         if correctGuessesFormatted.isEmpty {
-            correctGuessesFormatted = "😢 None"
+            correctGuessesFormatted = isVOOn ? "None" : "😢 None"
         }
         if wrongGuessesFormatted.isEmpty {
-            wrongGuessesFormatted = "😎 None"
+            wrongGuessesFormatted = isVOOn ? "None" : "😎 None"
         }
 
         switch reason {
@@ -302,8 +311,8 @@ class ALevelViewController: UIViewController {
 
             alert.message?.append(
 """
-\n\nCorrect guesses: \(correctGuessesFormatted)
-Incorrect guesses: \(wrongGuessesFormatted)
+\n\nCorrect guesses: \(correctGuessesFormatted).
+Incorrect guesses: \(wrongGuessesFormatted).
 """)
 
             present(alert, animated: true)
