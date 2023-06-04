@@ -35,7 +35,7 @@ class MultibuddyScreenshots: XCTestCase {
         takeScreenshot(named: "1-home")
         app.staticTexts["Spot Multiples of 2"].firstMatch.tap()
         takeScreenshot(named: "2-level-start")
-        for _ in 0...4 {
+        for _ in 0...2 {
             XCTAssertTrue(app.buttons["\(Const.yesMessage)"].firstMatch
                 .waitForExistence(timeout: 5))
             app.buttons["\(Const.yesMessage)"].firstMatch.tap()
@@ -59,7 +59,7 @@ class MultibuddyScreenshots: XCTestCase {
         app.swipeUp()
         XCTAssertTrue(app.staticTexts["Multiples of 6"].firstMatch
             .waitForExistence(timeout: 5))
-        takeScreenshot(named: "4-tips-mid")
+        takeScreenshot(named: "5-tips-mid")
     }
 
 
