@@ -19,10 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // TODO: todos
-    // accessibility: voice control, kid-adult-boomer
-
     // LATER (post publishing)
     // music & sound effects
+    // test kid-adult-boomer
     // Improve design of level ended alert
     // ?allow setting difficulty (higher score, less lives, less time)
     // ?add more levels?
