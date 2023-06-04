@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // TODO: todos
-    // accessibility: voice control, voiceover, kid-adult-boomer
+    // accessibility: voice control, kid-adult-boomer
 
     // LATER (post publishing)
     // music & sound effects
