@@ -19,13 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // TODO: todos
-    // music & sound effects
     // test kid-adult-boomer
-    // Improve design of level ended alert
-    // ?allow setting difficulty (higher score, less lives, less time)
-    // ?add more levels?
-    // lives left -> lives used, with emojis for none, or all but 1 etc
-    // don't show same number twice in a row
+    // ?Improve design of level ended alert
+    // ?lives left -> lives used, with emojis for none, or all but 1 etc
+    // ?don't show same number twice in a row
 
 
     // MARK: Life Cycle
