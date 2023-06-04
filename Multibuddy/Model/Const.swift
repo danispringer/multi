@@ -43,6 +43,7 @@ struct Const {
     // MARK: UserDefaults
     static let levelIndexKey = "levelIndexKey"
     static let completedLevels = "completedLevels"
+    static let userSawSplash = "userSawSplash"
 
     static let pointsPerTap = 100
     static let timerSeconds: Float = 59

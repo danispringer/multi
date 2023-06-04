@@ -62,11 +62,21 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         guard shouldShowHelp else {
             return
         }
+        if !ud.bool(forKey: Const.userSawSplash) {
+            showSplash()
+            ud.set(true, forKey: Const.userSawSplash)
+        }
 
     }
 
 
     // MARK: Helpers
+
+
+    func showSplash() {
+        let alert = createAlert(alertReasonParam: .splash, alertStyle: .alert)
+        present(alert, animated: true)
+    }
 
 
     func getCompletedLevels() -> [Int] {

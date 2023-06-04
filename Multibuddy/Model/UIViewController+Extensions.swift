@@ -72,10 +72,12 @@ extension UIViewController {
         case pointsReached
         case emailError
         case resetProgress
+        case splash
     }
 
 
     func createAlert(alertReasonParam: AlertReason, okActionString: String = Const.okMessage,
+                     alertStyle: UIAlertController.Style = .alert,
                      levelIndex: Int = 0, points: Int = 0,
                      secondsUsed: Int = 0, livesLeft: Int = 0) -> UIAlertController {
 
@@ -135,6 +137,13 @@ extension UIViewController {
                 Are you sure you want to erase progress? This will reset all levels to \
                 purple/undone
                 """
+            case .splash:
+                alertTitle = "👋☺️ Welcome"
+
+                alertMessage = """
+                This app will help you learn timetables while having fun!
+                Tap "\(Const.tipsTitle)" at the top of the screen at any time for some help.
+                """
             default:
                 alertTitle = "Unknown error"
                 alertMessage = """
@@ -143,7 +152,7 @@ extension UIViewController {
         }
 
         let alert = UIAlertController(title: alertTitle, message: alertMessage,
-                                      preferredStyle: .alert)
+                                      preferredStyle: alertStyle)
         let alertAction = UIAlertAction(title: okActionString, style: .cancel)
         alert.addAction(alertAction)
 
