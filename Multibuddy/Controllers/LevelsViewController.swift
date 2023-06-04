@@ -63,6 +63,9 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         guard shouldShowHelp else {
             return
         }
+        guard !CommandLine.arguments.contains("--multibuddyScreenshots") else {
+            return // don't show tips alert if testing
+        }
         if !ud.bool(forKey: Const.userSawSplash) {
             showSplash()
             ud.set(true, forKey: Const.userSawSplash)
