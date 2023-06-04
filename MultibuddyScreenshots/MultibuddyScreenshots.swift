@@ -17,8 +17,6 @@ class MultibuddyScreenshots: XCTestCase {
 
     var app: XCUIApplication!
 
-    let aList = [Const.appName]
-
 
     override func setUpWithError() throws {
         continueAfterFailure = false
@@ -30,53 +28,44 @@ class MultibuddyScreenshots: XCTestCase {
     }
 
 
-    func anAction(word: String) {
-        let tablesQuery = app.tables
-        let aThing = tablesQuery.cells.staticTexts[word]
-        XCTAssertTrue(aThing.waitForExistence(timeout: 5))
-        aThing.tap()
-        switch word {
-            case Const.appName:
-                XCTAssertTrue(app.staticTexts["⭐️ Level 1"].firstMatch
-                    .waitForExistence(timeout: 5))
-                takeScreenshot(named: "2-\(Const.appName)-levels")
-                XCTAssertTrue(app.staticTexts["⭐️ Level 2"].firstMatch
-                    .waitForExistence(timeout: 5))
-                app.staticTexts["⭐️ Level 2"].firstMatch.tap()
-                for _ in 0...4 {
-                    XCTAssertTrue(app.buttons["\(Const.noMessageGame)"].firstMatch
-                        .waitForExistence(timeout: 5))
-                    app.buttons["\(Const.noMessageGame)"].firstMatch.tap()
-                }
-                XCTAssertTrue(app.buttons[Const.appName].firstMatch
-                    .waitForExistence(timeout: 5))
-                XCTAssertTrue(app.buttons["\(Const.noMessageGame)"].firstMatch
-                    .waitForExistence(timeout: 5))
-                takeScreenshot(named: "3-\(Const.appName)-game-middle")
-                XCTAssertTrue(app.buttons["OK"].firstMatch
-                    .waitForExistence(timeout: 25))
-                app.buttons["OK"].firstMatch.tap()
-
-                XCTAssertTrue(app.buttons[Const.appName].firstMatch
-                    .waitForExistence(timeout: 5))
-                app.buttons[Const.appName].firstMatch.tap()
-                app.buttons["Multibuddy"].firstMatch.tap()
-            default:
-                fatalError()
+    func anAction() {
+        // game
+        XCTAssertTrue(app.staticTexts["Spot Multiples of 2"].firstMatch
+            .waitForExistence(timeout: 5))
+        takeScreenshot(named: "1-home")
+        app.staticTexts["Spot Multiples of 2"].firstMatch.tap()
+        takeScreenshot(named: "2-level-start")
+        for _ in 0...4 {
+            XCTAssertTrue(app.buttons["\(Const.yesMessage)"].firstMatch
+                .waitForExistence(timeout: 5))
+            app.buttons["\(Const.yesMessage)"].firstMatch.tap()
         }
+        takeScreenshot(named: "3-level-mid")
+        XCTAssertTrue(app.buttons[Const.appName].firstMatch
+            .waitForExistence(timeout: 5))
+        app.buttons[Const.appName].firstMatch.tap()
+
+        // tips
+        XCTAssertTrue(app.staticTexts["\(Const.tipsTitle)"].firstMatch
+            .waitForExistence(timeout: 5))
+        app.staticTexts["\(Const.tipsTitle)"].tap()
+
+        XCTAssertTrue(app.staticTexts["Multiples of 2"].firstMatch
+            .waitForExistence(timeout: 5))
+        app.swipeDown()
+        XCTAssertTrue(app.staticTexts["Multiples of 2"].firstMatch
+            .waitForExistence(timeout: 5))
+        takeScreenshot(named: "4-tips-top")
+        app.swipeUp()
+        XCTAssertTrue(app.staticTexts["Multiples of 6"].firstMatch
+            .waitForExistence(timeout: 5))
+        takeScreenshot(named: "4-tips-mid")
     }
 
 
     func testMakeScreenshots() {
         app.launch()
-
-        // Home
-        takeScreenshot(named: "7-Home")
-
-        for aItem in aList {
-            anAction(word: aItem)
-        }
-
+        anAction()
     }
 
 
