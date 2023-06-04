@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // TODO: todos
-    // LATER (post publishing)
     // music & sound effects
     // test kid-adult-boomer
     // Improve design of level ended alert

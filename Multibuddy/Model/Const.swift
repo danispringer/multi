@@ -49,7 +49,7 @@ struct Const {
     static let pointsPerTap = 100
     static let timerSeconds: Float = 59
     static let livesPerLevel = 4
-    static let pointsGoal = 20 * pointsPerTap
+    static let pointsGoal = 10 * pointsPerTap
     static let baseOptions = Array(2...10)
     static let fakeIndexOffset: Int = baseOptions.first!
 

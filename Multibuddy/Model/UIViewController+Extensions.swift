@@ -127,7 +127,6 @@ extension UIViewController {
                 let myTitle = "🎉 You Won! 🎊"
                 alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
                 let secondSeconds = secondsUsed == 1 ? "second" : "seconds"
-                let livesLeftMessage = String(repeating: "❤️", count: livesLeft)
                 alertMessage = """
                 You reached \(Const.pointsGoal) points and successfully completed Level \
                 \(levelIndex+1)
