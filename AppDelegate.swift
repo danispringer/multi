@@ -20,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // TODO: todos
     // test kid-adult-boomer
-    // Improve design of level ended alert, merge/remove "your score" behind alert, should be in alert, and behind alert just play again buttons (?or maybe alert should have nextLevel, playAgain, Back..), also showing 1100 points when goal is 1k is irrelevant.. maybe instead of alert show actual vc
+    // Improve design of level ended alert, merge/remove "your score" behind alert,
+    //    should be in alert, and behind alert just play again buttons (?or maybe alert
+    //    should have nextLevel, playAgain, Back..), also showing 1100 points when goal
+    //    is 1k is irrelevant.. maybe instead of alert show actual vc
     // maybe show score vs score needed as progress bar filling up
     // ?lives left -> lives used, with emojis for none, or all but 1 etc
     // ?don't show same number twice in a row

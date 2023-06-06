@@ -76,6 +76,43 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
     // MARK: Helpers
 
+    func didPassGatedAlert(completion: @escaping (Bool) -> Void) {
+
+        let firstRandom = Int.random(in: 7...11)
+        let secondRandom = Int.random(in: 7...11)
+        let solution = firstRandom * secondRandom
+
+        let alert = UIAlertController(title: "Grown Up Area",
+                                      message: "What is \(firstRandom) * \(secondRandom)?",
+                                      preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter result here..."
+        }
+        let alertAction = UIAlertAction(title: Const.okMessage, style: .cancel) { _ in
+            if let userAttempt = Int(alert.textFields?.first?.text ?? ""),
+               userAttempt == solution {
+                alert.dismiss(animated: true) {
+                    completion(true)
+                }
+            } else {
+                alert.dismiss(animated: true) {
+                    completion(false)
+                }
+            }
+        }
+        alert.addAction(alertAction)
+
+        present(alert, animated: true)
+        // change to desired number of seconds (in this case 5 seconds)
+        let when = DispatchTime.now() + 5
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            // your code with delay
+            alert.dismiss(animated: true) {
+                completion(false)
+            }
+        }
+    }
+
 
     func showSplash() {
         let alert = createAlert(alertReasonParam: .splash, alertStyle: .alert)
@@ -193,25 +230,48 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
 
     func infoMenu() -> UIMenu {
-        let shareApp = UIAction(title: Const.shareTitleMessage,
-                                image: UIImage(systemName: "heart"),
-                                state: .off) { _ in
-            self.shareApp()
+        let shareAppAction = UIAction(title: Const.shareTitleMessage,
+                                      image: UIImage(systemName: "heart"),
+                                      state: .off) { _ in
+
+            self.didPassGatedAlert { didPass in
+                guard didPass else {
+                    return
+                }
+                self.shareApp()
+            }
         }
-        let review = UIAction(title: Const.leaveReview,
-                              image: UIImage(systemName: "hand.thumbsup"), state: .off) { _ in
-            self.requestReview()
+        let reviewAction = UIAction(title: Const.leaveReview,
+                                    image: UIImage(systemName: "hand.thumbsup"),
+                                    state: .off) { _ in
+
+            self.didPassGatedAlert { didPass in
+                guard didPass else {
+                    return
+                }
+                self.requestReview()
+            }
         }
-        let moreApps = UIAction(title: Const.showAppsButtonTitle,
-                                image: UIImage(systemName: "apps.iphone"),
-                                state: .off) { _ in
-            self.showApps()
+        let moreAppsAction = UIAction(title: Const.showAppsButtonTitle,
+                                      image: UIImage(systemName: "apps.iphone"),
+                                      state: .off) { _ in
+            self.didPassGatedAlert { didPass in
+                guard didPass else {
+                    return
+                }
+                self.showApps()
+            }
         }
 
         let emailAction = UIAction(title: Const.contact,
                                    image: UIImage(systemName: "envelope.badge"),
                                    state: .off) { _ in
-            self.sendEmailTapped()
+            self.didPassGatedAlert { didPass in
+                guard didPass else {
+                    return
+                }
+                self.sendEmailTapped()
+            }
         }
 
         let resetAction = UIAction(title: Const.reset,
@@ -228,7 +288,8 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
 
         let infoMenu = UIMenu(title: myTitle, image: nil, identifier: .none,
                               options: .displayInline,
-                              children: [emailAction, review, shareApp, moreApps, resetAction])
+                              children: [emailAction, reviewAction, shareAppAction,
+                                         moreAppsAction, resetAction])
         return infoMenu
     }
 
