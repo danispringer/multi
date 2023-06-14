@@ -311,8 +311,8 @@ class ALevelViewController: UIViewController {
 
             alert.message?.append(
 """
-\n\nCorrect guesses: \(correctGuessesFormatted).
-Incorrect guesses: \(wrongGuessesFormatted).
+\n\nCorrectly spotted: \(correctGuessesFormatted).
+Incorrectly spotted: \(wrongGuessesFormatted).
 """)
 
             present(alert, animated: true)
