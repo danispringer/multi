@@ -21,8 +21,6 @@ class ALevelViewController: UIViewController {
     @IBOutlet weak var timerProgress: UIProgressView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var livesLeftLabel: UILabel!
-    @IBOutlet weak var gameOverNextLevelButton: UIButton!
-    @IBOutlet weak var gameOverPlayAgainButton: UIButton!
 
 
     // MARK: Properties
@@ -82,6 +80,12 @@ class ALevelViewController: UIViewController {
     }
 
 
+    enum NextChoice {
+        case again
+        case next
+    }
+
+
     // MARK: Life Cycle
 
     override func viewDidLoad() {
@@ -138,10 +142,17 @@ class ALevelViewController: UIViewController {
 
     // MARK: Helpers
 
-
-    @IBAction func preLevelSelectionTapped(_ sender: UIButton) {
+    func preLevelSelectionTapped(choice: NextChoice) {
         // 0=again, 1=next
-        ud.set(levelNumberIndex+sender.tag, forKey: Const.levelIndexKey)
+        var valueToAdd = 0
+        switch choice {
+                //            case .again: // add 0 so case unneeded
+            case .next:
+                valueToAdd = 1
+            default:
+                break
+        }
+        ud.set(levelNumberIndex+valueToAdd, forKey: Const.levelIndexKey)
         navigationController!.popViewController(animated: true)
     }
 
@@ -315,21 +326,33 @@ class ALevelViewController: UIViewController {
 Incorrectly spotted: \(wrongGuessesFormatted).
 """)
 
+            let nextLevelAction = UIAlertAction(title: "Next Level", style: .default) { _ in
+                self.preLevelSelectionTapped(choice: .next)
+            }
+            let playAgainAction = UIAlertAction(title: "Play Again", style: .default) { _ in
+                self.preLevelSelectionTapped(choice: .again)
+            }
+            let goHomeAction = UIAlertAction(title: "Back To Home", style: .default) { _ in
+                self.navigationController!.popViewController(animated: true)
+            }
+            for action in [nextLevelAction, playAgainAction, goHomeAction] {
+                alert.addAction(action)
+            }
+
             present(alert, animated: true)
             timerLabel.isHidden = true
             timerLabel.textColor = .label
             let points = score
             let pointPoints = points == 1 ? "point" : "points"
-            numberLabel.attributedText = attrifyString(
-                preString: "Your score:\n",
-                toAttrify: "\(points)",
-                postString: pointPoints,
-                color: myThemeColor)
+            //            numberLabel.attributedText = attrifyString(
+            //                preString: "Your score:\n",
+            //                toAttrify: "\(points)",
+            //                postString: pointPoints,
+            //                color: myThemeColor)
+            numberLabel.isHidden = true
             timerProgress.isHidden = true
             scoreLabel.isHidden = true
             livesLeftLabel.isHidden = true
-            gameOverPlayAgainButton.isHidden = false
-            gameOverNextLevelButton.isHidden = false
         }
     }
 

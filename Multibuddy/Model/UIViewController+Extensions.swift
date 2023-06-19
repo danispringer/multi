@@ -64,8 +64,6 @@ extension UIViewController {
 
     enum AlertReason {
         case unknown
-        case textfieldEmpty
-        case nan
         case lastLevelCompleted
         case timeUp
         case livesUp
@@ -91,14 +89,6 @@ extension UIViewController {
                 Your device could not send e-mail. Please check e-mail configuration and \
                 try again.
                 """
-            case .textfieldEmpty:
-                alertTitle = "Textfield empty"
-                alertMessage = "Please try again"
-            case .nan:
-                alertTitle = "Please enter numbers only"
-                alertMessage = """
-                Highest number allowed: \(UInt64.max/4)
-                """
             case .lastLevelCompleted:
                 let myTitle = "👑 WOW! You did it! 🎉"
                 alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
@@ -118,7 +108,7 @@ extension UIViewController {
                 let myTitle = "💔 Game Over 💔"
                 alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
                 alertMessage = """
-                No more Lives.
+                No lives left.
                 You reached \(points) points.
                 Reach \(Const.pointsGoal) points to complete this level.
                 Try again!
@@ -126,16 +116,13 @@ extension UIViewController {
             case .pointsReached:
                 let myTitle = "🎉 You Won! 🎊"
                 alertTitle = isVOOn ? emojiless(original: myTitle) : myTitle
-                let secondSeconds = secondsUsed == 1 ? "second" : "seconds"
+//                let secondSeconds = secondsUsed == 1 ? "second" : "seconds"
                 alertMessage = """
-                You reached \(Const.pointsGoal) points and successfully completed Level \
-                \(levelIndex+1)
-
-                Time used: \(secondsUsed) \(secondSeconds)
-
-                Lives left: \(isVOOn ? "\(livesLeft)" :
-                String(repeating: "❤️", count: livesLeft))
+                You reached \(Const.pointsGoal) points
                 """
+//                Time used: \(secondsUsed) \(secondSeconds)
+//                Lives left: \(isVOOn ? "\(livesLeft)" :
+//                String(repeating: "❤️", count: livesLeft))
             case .resetProgress:
                 alertTitle = "\(Const.reset)?"
                 alertMessage = isVOOn ? """
@@ -162,8 +149,13 @@ extension UIViewController {
 
         let alert = UIAlertController(title: alertTitle, message: alertMessage,
                                       preferredStyle: alertStyle)
-        let alertAction = UIAlertAction(title: okActionString, style: .cancel)
-        alert.addAction(alertAction)
+
+        let noDefaultActionCase: [AlertReason] = [.timeUp, .livesUp, .pointsReached]
+
+        if !noDefaultActionCase.contains(alertReasonParam) {
+            let alertAction = UIAlertAction(title: okActionString, style: .cancel)
+            alert.addAction(alertAction)
+        }
 
         return alert
     }

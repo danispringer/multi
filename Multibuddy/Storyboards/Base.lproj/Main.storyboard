@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -59,32 +59,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhm-Zs-v73">
-                                <rect key="frame" x="108" y="660" width="177" height="55"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Next Level">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="preLevelSelectionTapped:" destination="li8-1e-9hm" eventType="touchUpInside" id="in0-7O-F72"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❤️❤️❤️❤️❤️" textAlignment="right" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxZ-YY-IN6">
                                 <rect key="frame" x="204.66666666666663" y="153.33333333333334" width="172.33333333333337" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5e-QA-WGz">
-                                <rect key="frame" x="108" y="747" width="177" height="55"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Play Again">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="preLevelSelectionTapped:" destination="li8-1e-9hm" eventType="touchUpInside" id="uaX-hk-HdQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yn4-JG-mVF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,7 +75,6 @@
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="trailing" secondItem="yDN-Op-qas" secondAttribute="trailing" constant="16" id="GWu-V4-nkv"/>
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JLD-aB-T4c" secondAttribute="trailing" constant="16" id="K5K-H7-ay3"/>
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="centerX" secondItem="xK0-y4-QYe" secondAttribute="trailing" constant="8" id="Ufx-8d-lxf"/>
-                            <constraint firstItem="yn4-JG-mVF" firstAttribute="bottom" secondItem="g5e-QA-WGz" secondAttribute="bottom" constant="16" id="ZTB-Zg-BZs"/>
                             <constraint firstItem="NVP-EG-pZV" firstAttribute="top" secondItem="JLD-aB-T4c" secondAttribute="bottom" constant="16" id="ZqE-DP-6e0"/>
                             <constraint firstItem="xK0-y4-QYe" firstAttribute="top" secondItem="NVP-EG-pZV" secondAttribute="bottom" constant="32" id="b94-jG-yuL"/>
                             <constraint firstItem="mL4-r5-LVc" firstAttribute="centerY" secondItem="yn4-JG-mVF" secondAttribute="centerY" id="d1C-gs-7xO"/>
@@ -103,22 +82,17 @@
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="trailing" secondItem="NVP-EG-pZV" secondAttribute="trailing" id="dN6-VD-mgs"/>
                             <constraint firstItem="mL4-r5-LVc" firstAttribute="leading" secondItem="yn4-JG-mVF" secondAttribute="leading" constant="16" id="f1R-Jq-I0P"/>
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="centerX" secondItem="BYf-xy-pkD" secondAttribute="trailing" constant="8" id="fLz-lP-CXe"/>
-                            <constraint firstItem="g5e-QA-WGz" firstAttribute="centerX" secondItem="yn4-JG-mVF" secondAttribute="centerX" id="fzT-B9-VgO"/>
                             <constraint firstItem="BYf-xy-pkD" firstAttribute="leading" secondItem="yn4-JG-mVF" secondAttribute="leading" constant="16" id="jvZ-Zd-PNe"/>
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="trailing" secondItem="OxZ-YY-IN6" secondAttribute="trailing" constant="16" id="k4j-Nk-Q22"/>
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="bottom" secondItem="yDN-Op-qas" secondAttribute="bottom" constant="16" id="oOA-EL-TWa"/>
-                            <constraint firstItem="g5e-QA-WGz" firstAttribute="top" secondItem="bhm-Zs-v73" secondAttribute="bottom" constant="32" id="pRV-Ky-bXn"/>
                             <constraint firstItem="NVP-EG-pZV" firstAttribute="leading" secondItem="yn4-JG-mVF" secondAttribute="leading" id="qf0-wu-Dtk"/>
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="bottom" secondItem="BYf-xy-pkD" secondAttribute="bottom" constant="16" id="tot-hY-cHp"/>
-                            <constraint firstItem="bhm-Zs-v73" firstAttribute="centerX" secondItem="yn4-JG-mVF" secondAttribute="centerX" id="vvK-rW-mQR"/>
                             <constraint firstItem="xK0-y4-QYe" firstAttribute="leading" secondItem="yn4-JG-mVF" secondAttribute="leading" constant="16" id="y2I-dF-6Ta"/>
                             <constraint firstItem="yn4-JG-mVF" firstAttribute="trailing" secondItem="mL4-r5-LVc" secondAttribute="trailing" constant="16" id="yIb-bA-zaf"/>
                             <constraint firstItem="JLD-aB-T4c" firstAttribute="leading" secondItem="yn4-JG-mVF" secondAttribute="leading" constant="16" id="yaG-n3-ZMf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gameOverNextLevelButton" destination="bhm-Zs-v73" id="5MR-kz-y3p"/>
-                        <outlet property="gameOverPlayAgainButton" destination="g5e-QA-WGz" id="h8u-l9-3If"/>
                         <outlet property="isMultipleButton" destination="BYf-xy-pkD" id="F8P-1E-SK4"/>
                         <outlet property="livesLeftLabel" destination="OxZ-YY-IN6" id="5h0-cn-5cQ"/>
                         <outlet property="notMultipleButton" destination="yDN-Op-qas" id="LfF-0b-aTJ"/>
