@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // maybe show score as progress bar filling up (vertical?)
 
-    // ?don't show same number twice in a row
-
 
     // MARK: Life Cycle
 
