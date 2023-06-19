@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // TODO: todos
     // test kid-adult-boomer
 
-    // maybe show score vs score needed as progress bar filling up (vertical?)
+    // maybe show score as progress bar filling up (vertical?)
 
     // ?don't show same number twice in a row
 
