@@ -117,6 +117,7 @@ class ALevelViewController: UIViewController {
             arrToCustomShuffle.append(contentsOf: Array(repeating: num, count: myBase))
         }
         arrToCustomShuffle.shuffle()
+        arrToCustomShuffle = arrToCustomShuffle.dropAdjacentDupes()
     }
 
 
@@ -342,13 +343,6 @@ Incorrectly spotted: \(wrongGuessesFormatted).
             present(alert, animated: true)
             timerLabel.isHidden = true
             timerLabel.textColor = .label
-            let points = score
-            let pointPoints = points == 1 ? "point" : "points"
-            //            numberLabel.attributedText = attrifyString(
-            //                preString: "Your score:\n",
-            //                toAttrify: "\(points)",
-            //                postString: pointPoints,
-            //                color: myThemeColor)
             numberLabel.isHidden = true
             timerProgress.isHidden = true
             scoreLabel.isHidden = true

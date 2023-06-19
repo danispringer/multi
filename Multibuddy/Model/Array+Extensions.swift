@@ -37,3 +37,21 @@ extension Array: HasMiddleValue {
     }
 
 }
+
+
+extension Array where Element: Equatable {
+    func dropAdjacentDupes() -> [Element] {
+        guard !self.isEmpty else { return [] }
+        var noAdjacentDupesArr = [Element]()
+        for (index, element) in self.enumerated() {
+            if index > 0 {
+                if element != noAdjacentDupesArr.last {
+                    noAdjacentDupesArr.append(element)
+                }
+            } else {
+                noAdjacentDupesArr.append(element)
+            }
+        }
+        return noAdjacentDupesArr
+    }
+}
