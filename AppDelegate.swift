@@ -21,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // TODO: todos
     // test kid-adult-boomer
 
-    // maybe show score as progress bar filling up (vertical?)
-
 
     // MARK: Life Cycle
 
