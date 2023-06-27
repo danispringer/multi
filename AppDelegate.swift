@@ -21,10 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // TODO: todos
     // test kid-adult-boomer
 
-    // make Bonus level for all multiples and user has to say what it's a multiple of
-    // or just for unlocked multiples
-    // maybe let user choose which multiples to include in Bonus level
-
 
     // MARK: Life Cycle
 
