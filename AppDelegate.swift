@@ -18,9 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    // TODO: todos
-    // test kid-adult-boomer
-
 
     // MARK: Life Cycle
 

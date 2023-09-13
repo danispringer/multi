@@ -86,6 +86,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
                                       message: "What is \(firstRandom) * \(secondRandom)?",
                                       preferredStyle: .alert)
         alert.addTextField { (textField) in
+            textField.keyboardType = .numberPad
             textField.placeholder = "Enter result here..."
         }
         let alertAction = UIAlertAction(title: Const.okMessage, style: .cancel) { _ in
