@@ -147,7 +147,7 @@ If the number ends in 0, then it is a multiple of 10.
 
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return Const.baseOptions.count
+        return Const.optionsWithTips.count
     }
 
 

@@ -51,6 +51,7 @@ struct Const {
     static let livesPerLevel = 4
     static let pointsGoal = 10 * pointsPerTap
     static let baseOptions = Array(2...100)
+    static let optionsWithTips = Array(2...10)
     static let fakeIndexOffset: Int = baseOptions.first!
 
 }
