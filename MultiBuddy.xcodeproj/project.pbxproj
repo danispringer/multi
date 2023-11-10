@@ -54,7 +54,6 @@
 		3386A109281A27B5009FCB7F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		338BC9E428FC5573008FCA90 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		3392B0DB288D114500EE9525 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		33C6167127C4985400EC8575 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		33CF6B8C26F4434A002E5CA9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		33DB100C28EEB051001083A4 /* ALevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALevelViewController.swift; sourceTree = "<group>"; };
 		33E32B9D288B4DA200CED09C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -89,7 +88,6 @@
 				3319088C20E8772E007C679C /* MultiBuddy */,
 				33F3218928384B2100385BBD /* MultiBuddyScreenshots */,
 				3319088B20E8772E007C679C /* Products */,
-				33C6167027C4985400EC8575 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,14 +162,6 @@
 				33364BEC2906696F00427C5C /* UIButton+Extensions.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		33C6167027C4985400EC8575 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				33C6167127C4985400EC8575 /* StoreKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		33F3218928384B2100385BBD /* MultiBuddyScreenshots */ = {
