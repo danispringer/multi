@@ -16,7 +16,7 @@ schemeName="MultiBuddy"
 simulators=(
     "iPhone 15 Pro Max"
     "iPhone 13 Pro Max"
-    "iPhone 8 Plus"
+    "iPhone SE (3rd generation)"
     "iPad Pro (12.9-inch) (6th generation)"
 )
 
