@@ -1,6 +1,6 @@
 //
 //  UIViewController+Extensions.swift
-//  Multibuddy
+//  MultiBuddy
 //
 //  Created by Daniel Springer on 9/16/21.
 //  Copyright © 2023 Daniel Springer. All rights reserved.

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # The Xcode project to create screenshots for
-projectName="./Multibuddy.xcodeproj"
+projectName="./MultiBuddy.xcodeproj"
 
 # The scheme to run tests for
-schemeName="Multibuddy"
+schemeName="MultiBuddy"
 
 # All the simulators we want to screenshot
 # Copy/Paste new names from Xcode's
@@ -14,7 +14,7 @@ schemeName="Multibuddy"
 #    "iPhone 13 Pro Max"
 #)
 simulators=(
-    "iPhone 14 Pro Max"
+    "iPhone 15 Pro Max"
     "iPhone 13 Pro Max"
     "iPhone 8 Plus"
     "iPad Pro (12.9-inch) (6th generation)"
@@ -32,13 +32,13 @@ appearances=(
 )
 
 # Save final screenshots into this folder (it will be created)
-targetFolder="/Users/dani/Desktop/MultibuddyScreenshots"
-rm -rf /Users/dani/Desktop/MultibuddyScreenshots
+targetFolder="/Users/dani/Desktop/MultiBuddyScreenshots"
+rm -rf /Users/dani/Desktop/MultiBuddyScreenshots
 
 for simulator in "${simulators[@]}"; do
     for language in "${languages[@]}"; do
         for appearance in "${appearances[@]}"; do
-            rm -rf /tmp/MultibuddyDerivedData/Logs/Test
+            rm -rf /tmp/MultiBuddyDerivedData/Logs/Test
             echo "📲 Building and Running for $simulator in $language"
 
             # Boot up the new simulator and set it to
@@ -47,10 +47,10 @@ for simulator in "${simulators[@]}"; do
             xcrun simctl ui "$simulator" appearance $appearance
 
             # Build and Test
-            xcodebuild -testLanguage $language -scheme $schemeName -project $projectName -derivedDataPath '/tmp/MultibuddyDerivedData/' -destination "platform=iOS Simulator,name=$simulator" build test
+            xcodebuild -testLanguage $language -scheme $schemeName -project $projectName -derivedDataPath '/tmp/MultiBuddyDerivedData/' -destination "platform=iOS Simulator,name=$simulator" build test
             echo "Collecting Results..."
             mkdir -p "$targetFolder/$simulator/"
-            find /tmp/MultibuddyDerivedData/Logs/Test -maxdepth 1 -type d -exec xcparse screenshots {} "$targetFolder/$simulator/" \;
+            find /tmp/MultiBuddyDerivedData/Logs/Test -maxdepth 1 -type d -exec xcparse screenshots {} "$targetFolder/$simulator/" \;
         done
     done
 

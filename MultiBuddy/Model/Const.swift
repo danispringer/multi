@@ -1,6 +1,6 @@
 //
 //  Const.swift
-//  Multibuddy
+//  MultiBuddy
 //
 //  Created by Daniel Springer on 11/26/18.
 //  Copyright © 2023 Daniel Springer. All rights reserved.

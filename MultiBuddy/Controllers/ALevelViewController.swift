@@ -1,6 +1,6 @@
 //
 //  ALevelViewController.swift
-//  Multibuddy
+//  MultiBuddy
 //
 //  Created by Daniel Springer on 10/6/22.
 //  Copyright © 2023 Daniel Springer. All rights reserved.
@@ -91,7 +91,7 @@ class ALevelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if CommandLine.arguments.contains("--multibuddyScreenshots") {
+        if CommandLine.arguments.contains("--MultiBuddyScreenshots") {
             // We are in testing mode, make arrangements if needed
             UIView.setAnimationsEnabled(false)
         }

@@ -1,6 +1,6 @@
 //
-//  MultibuddyScreenshots.swift
-//  MultibuddyScreenshots
+//  MultiBuddyScreenshots.swift
+//  MultiBuddyScreenshots
 //
 //  Created by Daniel Springer on 5/20/22.
 //  Copyright © 2023 Daniel Springer. All rights reserved.
@@ -8,10 +8,10 @@
 
 import XCTest
 
-class MultibuddyScreenshots: XCTestCase {
+class MultiBuddyScreenshots: XCTestCase {
 
-    // xcodebuild -testLanguage en -scheme Multibuddy -project ./Multibuddy.xcodeproj
-    // -derivedDataPath '/tmp/MultibuddyDerivedData/' -destination
+    // xcodebuild -testLanguage en -scheme MultiBuddy -project ./MultiBuddy.xcodeproj
+    // -derivedDataPath '/tmp/MultiBuddyDerivedData/' -destination
     // "platform=iOS Simulator,name=iPhone 13 Pro Max" build test
     // https://blog.winsmith.de/english/ios/2020/04/14/xcuitest-screenshots.html
 
@@ -24,7 +24,7 @@ class MultibuddyScreenshots: XCTestCase {
 
         // We send a command line argument to our app,
         // to enable it to reset its state
-        app.launchArguments.append("--multibuddyScreenshots")
+        app.launchArguments.append("--MultiBuddyScreenshots")
     }
 
 

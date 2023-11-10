@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Multibuddy
+//  MultiBuddy
 //
 //  Created by Daniel Springer on 01/07/2018.
 //  Copyright © 2023 Daniel Springer. All rights reserved.
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [
             UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
-                if CommandLine.arguments.contains("--multibuddyScreenshots") {
+                if CommandLine.arguments.contains("--MultiBuddyScreenshots") {
                     // We are in testing mode, make arrangements
                     ud.set("", forKey: Const.completedLevels)
                 }

@@ -1,6 +1,6 @@
 //
 //  TipsTableViewCell.swift
-//  Multibuddy
+//  MultiBuddy
 //
 //  Created by dani on 5/18/23.
 //  Copyright © 2023 Daniel Springer. All rights reserved.

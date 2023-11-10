@@ -1,6 +1,6 @@
 //
 //  LevelsViewController.swift
-//  Multibuddy
+//  MultiBuddy
 //
 //  Created by Daniel Springer on 10/16/22.
 //  Copyright © 2023 Daniel Springer. All rights reserved.
@@ -23,7 +23,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if CommandLine.arguments.contains("--multibuddyScreenshots") {
+        if CommandLine.arguments.contains("--MultiBuddyScreenshots") {
             // We are in testing mode, make arrangements if needed
             UIView.setAnimationsEnabled(false)
         }
@@ -63,7 +63,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         guard shouldShowHelp else {
             return
         }
-        guard !CommandLine.arguments.contains("--multibuddyScreenshots") else {
+        guard !CommandLine.arguments.contains("--MultiBuddyScreenshots") else {
             return // don't show tips alert if testing
         }
         if !ud.bool(forKey: Const.userSawSplash) {

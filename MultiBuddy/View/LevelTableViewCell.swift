@@ -1,6 +1,6 @@
 //
 //  LevelTableViewCell.swift
-//  Multibuddy
+//  MultiBuddy
 //
 //  Created by Daniel Springer on 10/16/22.
 //  Copyright © 2023 Daniel Springer. All rights reserved.

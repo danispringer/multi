@@ -23,7 +23,7 @@
 		33DB100D28EEB051001083A4 /* ALevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB100C28EEB051001083A4 /* ALevelViewController.swift */; };
 		33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E32B9D288B4DA200CED09C /* Array+Extensions.swift */; };
 		33ECBA0621AC1BAA003199CB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBA0521AC1BAA003199CB /* Const.swift */; };
-		33F3218B28384B2100385BBD /* MultibuddyScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3218A28384B2100385BBD /* MultibuddyScreenshots.swift */; };
+		33F3218B28384B2100385BBD /* MultiBuddyScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3218A28384B2100385BBD /* MultiBuddyScreenshots.swift */; };
 		33F3219428384F9600385BBD /* screenshots.sh in Resources */ = {isa = PBXBuildFile; fileRef = 33F3219328384F9600385BBD /* screenshots.sh */; };
 		33F4B87A2A073B0A0074AC91 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBA0521AC1BAA003199CB /* Const.swift */; };
 /* End PBXBuildFile section */
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3319088A20E8772E007C679C /* Multibuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Multibuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3319088A20E8772E007C679C /* MultiBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3319088D20E8772E007C679C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3319089220E8772E007C679C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3319089420E87731007C679C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3319089720E87731007C679C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3319089920E87731007C679C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		332FCFE3289B8DE000D3C733 /* Multibuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Multibuddy.entitlements; sourceTree = "<group>"; };
+		332FCFE3289B8DE000D3C733 /* MultiBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MultiBuddy.entitlements; sourceTree = "<group>"; };
 		33364BEC2906696F00427C5C /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		334453EA28FC0A6200CC00E2 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		334453EC28FC0EFB00CC00E2 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 		33DB100C28EEB051001083A4 /* ALevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALevelViewController.swift; sourceTree = "<group>"; };
 		33E32B9D288B4DA200CED09C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		33ECBA0521AC1BAA003199CB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		33F3218828384B2100385BBD /* MultibuddyScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultibuddyScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		33F3218A28384B2100385BBD /* MultibuddyScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultibuddyScreenshots.swift; sourceTree = "<group>"; };
+		33F3218828384B2100385BBD /* MultiBuddyScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiBuddyScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F3218A28384B2100385BBD /* MultiBuddyScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiBuddyScreenshots.swift; sourceTree = "<group>"; };
 		33F3219328384F9600385BBD /* screenshots.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = screenshots.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				3319088D20E8772E007C679C /* AppDelegate.swift */,
-				3319088C20E8772E007C679C /* Multibuddy */,
-				33F3218928384B2100385BBD /* MultibuddyScreenshots */,
+				3319088C20E8772E007C679C /* MultiBuddy */,
+				33F3218928384B2100385BBD /* MultiBuddyScreenshots */,
 				3319088B20E8772E007C679C /* Products */,
 				33C6167027C4985400EC8575 /* Frameworks */,
 			);
@@ -96,16 +96,16 @@
 		3319088B20E8772E007C679C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3319088A20E8772E007C679C /* Multibuddy.app */,
-				33F3218828384B2100385BBD /* MultibuddyScreenshots.xctest */,
+				3319088A20E8772E007C679C /* MultiBuddy.app */,
+				33F3218828384B2100385BBD /* MultiBuddyScreenshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3319088C20E8772E007C679C /* Multibuddy */ = {
+		3319088C20E8772E007C679C /* MultiBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				332FCFE3289B8DE000D3C733 /* Multibuddy.entitlements */,
+				332FCFE3289B8DE000D3C733 /* MultiBuddy.entitlements */,
 				3350E55B20F1DDEA0093FC96 /* Model */,
 				33423D1F22DE50AF00149D40 /* View */,
 				3340755820E8C33500EFDAA9 /* Controllers */,
@@ -113,7 +113,7 @@
 				3326B5FF21DEBD240093C02C /* Assets */,
 				3319089920E87731007C679C /* Info.plist */,
 			);
-			path = Multibuddy;
+			path = MultiBuddy;
 			sourceTree = "<group>";
 		};
 		3326B5FF21DEBD240093C02C /* Assets */ = {
@@ -174,21 +174,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		33F3218928384B2100385BBD /* MultibuddyScreenshots */ = {
+		33F3218928384B2100385BBD /* MultiBuddyScreenshots */ = {
 			isa = PBXGroup;
 			children = (
-				33F3218A28384B2100385BBD /* MultibuddyScreenshots.swift */,
+				33F3218A28384B2100385BBD /* MultiBuddyScreenshots.swift */,
 				33F3219328384F9600385BBD /* screenshots.sh */,
 			);
-			path = MultibuddyScreenshots;
+			path = MultiBuddyScreenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3319088920E8772E007C679C /* Multibuddy */ = {
+		3319088920E8772E007C679C /* MultiBuddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3319089C20E87731007C679C /* Build configuration list for PBXNativeTarget "Multibuddy" */;
+			buildConfigurationList = 3319089C20E87731007C679C /* Build configuration list for PBXNativeTarget "MultiBuddy" */;
 			buildPhases = (
 				3319088620E8772E007C679C /* Sources */,
 				3319088720E8772E007C679C /* Frameworks */,
@@ -200,14 +200,14 @@
 			);
 			dependencies = (
 			);
-			name = Multibuddy;
+			name = MultiBuddy;
 			productName = "Guess My Number Fun";
-			productReference = 3319088A20E8772E007C679C /* Multibuddy.app */;
+			productReference = 3319088A20E8772E007C679C /* MultiBuddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		33F3218728384B2100385BBD /* MultibuddyScreenshots */ = {
+		33F3218728384B2100385BBD /* MultiBuddyScreenshots */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33F3219228384B2100385BBD /* Build configuration list for PBXNativeTarget "MultibuddyScreenshots" */;
+			buildConfigurationList = 33F3219228384B2100385BBD /* Build configuration list for PBXNativeTarget "MultiBuddyScreenshots" */;
 			buildPhases = (
 				33F3218428384B2100385BBD /* Sources */,
 				33F3218528384B2100385BBD /* Frameworks */,
@@ -218,9 +218,9 @@
 			dependencies = (
 				33F3218F28384B2100385BBD /* PBXTargetDependency */,
 			);
-			name = MultibuddyScreenshots;
+			name = MultiBuddyScreenshots;
 			productName = MatemagicaScreenshots;
-			productReference = 33F3218828384B2100385BBD /* MultibuddyScreenshots.xctest */;
+			productReference = 33F3218828384B2100385BBD /* MultiBuddyScreenshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +244,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3319088520E8772E007C679C /* Build configuration list for PBXProject "Multibuddy" */;
+			buildConfigurationList = 3319088520E8772E007C679C /* Build configuration list for PBXProject "MultiBuddy" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -257,8 +257,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3319088920E8772E007C679C /* Multibuddy */,
-				33F3218728384B2100385BBD /* MultibuddyScreenshots */,
+				3319088920E8772E007C679C /* MultiBuddy */,
+				33F3218728384B2100385BBD /* MultiBuddyScreenshots */,
 			);
 		};
 /* End PBXProject section */
@@ -350,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F3218B28384B2100385BBD /* MultibuddyScreenshots.swift in Sources */,
+				33F3218B28384B2100385BBD /* MultiBuddyScreenshots.swift in Sources */,
 				33F4B87A2A073B0A0074AC91 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +360,7 @@
 /* Begin PBXTargetDependency section */
 		33F3218F28384B2100385BBD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3319088920E8772E007C679C /* Multibuddy */;
+			target = 3319088920E8772E007C679C /* MultiBuddy */;
 			targetProxy = 33F3218E28384B2100385BBD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -512,15 +512,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = Multibuddy/Multibuddy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MultiBuddy/MultiBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JMVGHP3288;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = Multibuddy/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MultiBuddy;
+				INFOPLIST_FILE = MultiBuddy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,15 +542,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = Multibuddy/Multibuddy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MultiBuddy/MultiBuddy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JMVGHP3288;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = Multibuddy/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MultiBuddy;
+				INFOPLIST_FILE = MultiBuddy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -589,7 +587,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Multibuddy;
+				TEST_TARGET_NAME = MultiBuddy;
 			};
 			name = Debug;
 		};
@@ -612,14 +610,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Multibuddy;
+				TEST_TARGET_NAME = MultiBuddy;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3319088520E8772E007C679C /* Build configuration list for PBXProject "Multibuddy" */ = {
+		3319088520E8772E007C679C /* Build configuration list for PBXProject "MultiBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3319089A20E87731007C679C /* Debug */,
@@ -628,7 +626,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3319089C20E87731007C679C /* Build configuration list for PBXNativeTarget "Multibuddy" */ = {
+		3319089C20E87731007C679C /* Build configuration list for PBXNativeTarget "MultiBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3319089D20E87731007C679C /* Debug */,
@@ -637,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33F3219228384B2100385BBD /* Build configuration list for PBXNativeTarget "MultibuddyScreenshots" */ = {
+		33F3219228384B2100385BBD /* Build configuration list for PBXNativeTarget "MultiBuddyScreenshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33F3219028384B2100385BBD /* Debug */,
