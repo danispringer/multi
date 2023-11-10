@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8u8-uX-CMh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8u8-uX-CMh">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="1392" y="1656"/>
         </scene>
-        <!--Multibuddy-->
+        <!--MultiBuddy-->
         <scene sceneID="Sbo-VO-xJl">
             <objects>
-                <tableViewController storyboardIdentifier="LevelsViewController" title="Multibuddy" id="TNP-sy-QeK" customClass="LevelsViewController" customModule="Multibuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LevelsViewController" title="MultiBuddy" id="TNP-sy-QeK" customClass="LevelsViewController" customModule="Multibuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5dZ-VR-elh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Multibuddy" largeTitleDisplayMode="always" id="foA-a2-0Go"/>
+                    <navigationItem key="navigationItem" title="MultiBuddy" largeTitleDisplayMode="always" id="foA-a2-0Go"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aboutButton" destination="Zv2-cz-wTm" id="UV8-FD-qvo"/>

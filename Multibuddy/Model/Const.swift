@@ -17,7 +17,7 @@ struct Const {
 
     static let appVersion = "CFBundleShortVersionString"
     static let version = "v."
-    static let appName = "Multibuddy"
+    static let appName = "MultiBuddy"
     static let contact = "Email me"
     static let reset = "Erase progress"
     static let emailString = "00.segue_affix@icloud.com"
