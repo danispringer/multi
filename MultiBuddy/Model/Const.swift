@@ -43,15 +43,15 @@ struct Const {
 
     // MARK: UserDefaults
     static let levelIndexKey = "levelIndexKey"
-    static let completedLevels = "completedLevels"
-    static let userSawSplash = "userSawSplash"
+    static let completedLevels = "completedLevels2"
+    static let userSawSplash = "userSawSplash2"
 
     static let pointsPerTap = 100
     static let timerSeconds: Float = 59
-    static let livesPerLevel = 4
+    static let livesPerLevel = 3
     static let pointsGoal = 10 * pointsPerTap
-    static let baseOptions = Array(2...100)
-    static let optionsWithTips = Array(2...10)
+    static let baseOptions = Array(1...100)
+    static let optionsWithTips = Array(1...10)
     static let fakeIndexOffset: Int = baseOptions.first!
 
 }

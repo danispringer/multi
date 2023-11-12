@@ -114,10 +114,27 @@ class ALevelViewController: UIViewController {
 
         arrToCustomShuffle = Array(numbersRange)
         for num in arrToCustomShuffle where num % myBase == 0 {
-            arrToCustomShuffle.append(contentsOf: Array(repeating: num, count: myBase))
+            arrToCustomShuffle.append(contentsOf: Array(repeating: num, count: myBase-1))
         }
+
         arrToCustomShuffle.shuffle()
+
         arrToCustomShuffle = arrToCustomShuffle.dropAdjacentDupes()
+
+        var yeses = 0
+        var noses = 0
+
+        for number in arrToCustomShuffle {
+            if number % myBase == 0 {
+                yeses+=1
+            } else {
+                noses+=1
+            }
+        }
+
+        print("yeses: \(yeses)")
+        print("noses: \(noses)")
+
     }
 
 

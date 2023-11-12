@@ -17,6 +17,16 @@ class TipsViewController: UITableViewController {
         [
             "tip":
 """
+Every whole number is a multiple of 1.
+""",
+            "example":
+"""
+1, 2, 3, 563, etc, are multiples of 1, while 1.5, -2, 2.3, are NOT multiples of 1.
+"""
+        ],
+        [
+            "tip":
+"""
 If the number ends in 2, 4, 6, 8 (or 0), then it is a multiple of 2.
 """,
             "example":
