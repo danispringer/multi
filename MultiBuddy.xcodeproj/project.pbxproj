@@ -21,7 +21,6 @@
 		33CF6B8D26F4434A002E5CA9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF6B8C26F4434A002E5CA9 /* UIViewController+Extensions.swift */; };
 		33DB100D28EEB051001083A4 /* ALevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB100C28EEB051001083A4 /* ALevelViewController.swift */; };
 		33E273482B073EF9005B4D19 /* LevelsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E273472B073EF9005B4D19 /* LevelsCollectionViewController.swift */; };
-		33E2734A2B07484F005B4D19 /* LevelsUICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E273492B07484F005B4D19 /* LevelsUICollectionViewLayout.swift */; };
 		33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E32B9D288B4DA200CED09C /* Array+Extensions.swift */; };
 		33ECBA0621AC1BAA003199CB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBA0521AC1BAA003199CB /* Const.swift */; };
 		33F3218B28384B2100385BBD /* MultiBuddyScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3218A28384B2100385BBD /* MultiBuddyScreenshots.swift */; };
@@ -57,7 +56,6 @@
 		33CF6B8C26F4434A002E5CA9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		33DB100C28EEB051001083A4 /* ALevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALevelViewController.swift; sourceTree = "<group>"; };
 		33E273472B073EF9005B4D19 /* LevelsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCollectionViewController.swift; sourceTree = "<group>"; };
-		33E273492B07484F005B4D19 /* LevelsUICollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsUICollectionViewLayout.swift; sourceTree = "<group>"; };
 		33E32B9D288B4DA200CED09C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		33ECBA0521AC1BAA003199CB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		33F3218828384B2100385BBD /* MultiBuddyScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiBuddyScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,7 +146,6 @@
 			children = (
 				334453EC28FC0EFB00CC00E2 /* LevelCollectionViewCell.swift */,
 				3377971E2A15F16F0096EAD8 /* TipsTableViewCell.swift */,
-				33E273492B07484F005B4D19 /* LevelsUICollectionViewLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,7 +327,6 @@
 				33CF6B8D26F4434A002E5CA9 /* UIViewController+Extensions.swift in Sources */,
 				3392B0DC288D114500EE9525 /* UIView+Extensions.swift in Sources */,
 				33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */,
-				33E2734A2B07484F005B4D19 /* LevelsUICollectionViewLayout.swift in Sources */,
 				33ECBA0621AC1BAA003199CB /* Const.swift in Sources */,
 				33DB100D28EEB051001083A4 /* ALevelViewController.swift in Sources */,
 				33364BED2906696F00427C5C /* UIButton+Extensions.swift in Sources */,

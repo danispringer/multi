@@ -10,7 +10,8 @@ import UIKit
 import MessageUI
 
 class LevelsCollectionViewController: UICollectionViewController,
-                                      RemoteCollectionReloadDelegate {
+                                      RemoteCollectionReloadDelegate,
+                                      UICollectionViewDelegateFlowLayout {
 
     // MARK: Outlets
 
@@ -39,6 +40,9 @@ class LevelsCollectionViewController: UICollectionViewController,
         let aboutItem = UIBarButtonItem(customView: infoButton)
 
         navigationItem.rightBarButtonItems = [aboutItem, tipsItem]
+
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
 
@@ -312,6 +316,24 @@ class LevelsCollectionViewController: UICollectionViewController,
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
         return Const.baseOptions.count
+    }
+
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let noOfCellsInRow = 5
+
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+
+        let totalSpace = flowLayout.sectionInset.left
+        + flowLayout.sectionInset.right
+        + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
+
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+
+        return CGSize(width: size, height: size)
     }
 
 
