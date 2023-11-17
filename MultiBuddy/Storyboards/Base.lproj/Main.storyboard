@@ -215,7 +215,7 @@
                             <outlet property="delegate" destination="iwU-zL-5F7" id="HjG-Mh-SiO"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="MultiBuddy" largeTitleDisplayMode="always" id="3fz-0l-GH2"/>
+                    <navigationItem key="navigationItem" title="MultiBuddy" prompt="Made with ❤️ by Daniel Springer" largeTitleDisplayMode="always" id="3fz-0l-GH2"/>
                     <connections>
                         <outlet property="infoButton" destination="Zv2-cz-wTm" id="aKv-jX-oz1"/>
                         <outlet property="tipsButton" destination="2wA-V5-5Ow" id="y34-4F-boD"/>
