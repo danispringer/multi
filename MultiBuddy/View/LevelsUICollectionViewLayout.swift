@@ -9,12 +9,12 @@
 import UIKit
 
 class LevelsUICollectionViewLayout: UICollectionViewLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let noOfCellsInRow = 4
+        let noOfCellsInRow = 5
 
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
 

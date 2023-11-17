@@ -9,7 +9,8 @@
 import UIKit
 import MessageUI
 
-class LevelsCollectionViewController: UICollectionViewController, RemoteCollectionReloadDelegate {
+class LevelsCollectionViewController: UICollectionViewController,
+                                      RemoteCollectionReloadDelegate {
 
     // MARK: Outlets
 
@@ -18,7 +19,7 @@ class LevelsCollectionViewController: UICollectionViewController, RemoteCollecti
 
 
     // MARK: Life Cycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +45,7 @@ class LevelsCollectionViewController: UICollectionViewController, RemoteCollecti
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        tipsButton.setTitleNew(Const.tipsTitle, font: .title2)
+        tipsButton.setTitleNew(Const.tipsTitle, font: .largeTitle)
         tipsButton.accessibilityLabel = emojiless(original: Const.tipsTitle)
 
         tipsButton.doGlowAnimation(withColor: myThemeColor)
@@ -142,6 +143,7 @@ class LevelsCollectionViewController: UICollectionViewController, RemoteCollecti
         showLevelFor(IndexPath(row: restoredLevelIndex, section: 0))
         return false
     }
+
 
     func showLevelFor(_ indexPath: IndexPath) {
         let aLevelVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
@@ -275,7 +277,8 @@ class LevelsCollectionViewController: UICollectionViewController, RemoteCollecti
 
     // MARK: Delegates
 
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 didSelectItemAt indexPath: IndexPath) {
         showLevelFor(indexPath)
     }
 
