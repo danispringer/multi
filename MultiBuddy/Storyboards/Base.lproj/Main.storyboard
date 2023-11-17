@@ -179,56 +179,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oVa-FK-xBj">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="APh-wl-6QJ">
+                            <size key="itemSize" width="64" height="64"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="levelCell" id="98o-mt-Nqb" customClass="LevelCollectionViewCell" customModule="MultiBuddy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SomeLevelCell" id="98o-mt-Nqb" customClass="LevelCollectionViewCell" customModule="MultiBuddy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5jQ-8g-9zz">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0tU-Bn-zx2">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybQ-5n-1mh">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="⭐️" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XH-aP-rxe" userLabel="Numbers Range Label">
-                                                    <rect key="frame" x="45" y="43.666666666666671" width="38" height="40.666666666666671"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="7" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ3-KF-GQr" userLabel="Level Number Label">
-                                                    <rect key="frame" x="54.666666666666657" y="43.666666666666671" width="19" height="40.666666666666671"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="tintColor"/>
-                                            <constraints>
-                                                <constraint firstItem="YQ3-KF-GQr" firstAttribute="centerX" secondItem="ybQ-5n-1mh" secondAttribute="centerX" id="3wE-xC-MJr"/>
-                                                <constraint firstItem="YQ3-KF-GQr" firstAttribute="centerY" secondItem="ybQ-5n-1mh" secondAttribute="centerY" id="OfC-xE-3Yb"/>
-                                                <constraint firstItem="1XH-aP-rxe" firstAttribute="centerX" secondItem="ybQ-5n-1mh" secondAttribute="centerX" id="gmg-ZO-eVS"/>
-                                                <constraint firstItem="1XH-aP-rxe" firstAttribute="centerY" secondItem="ybQ-5n-1mh" secondAttribute="centerY" id="o6d-Vd-Ngl"/>
-                                            </constraints>
-                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="7" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ3-KF-GQr" userLabel="Level Number Label">
+                                            <rect key="frame" x="22.666666666666671" y="11.666666666666668" width="19" height="40.666666666666657"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="ybQ-5n-1mh" secondAttribute="bottom" id="63c-zB-0wd"/>
-                                        <constraint firstItem="ybQ-5n-1mh" firstAttribute="top" secondItem="5jQ-8g-9zz" secondAttribute="top" id="ZSc-JB-rzr"/>
-                                        <constraint firstItem="ybQ-5n-1mh" firstAttribute="leading" secondItem="5jQ-8g-9zz" secondAttribute="leading" id="dkB-t6-dWL"/>
-                                        <constraint firstAttribute="trailing" secondItem="ybQ-5n-1mh" secondAttribute="trailing" id="uVK-Xb-nhD"/>
+                                        <constraint firstItem="YQ3-KF-GQr" firstAttribute="centerX" secondItem="0tU-Bn-zx2" secondAttribute="centerX" id="ihA-ul-X4U"/>
+                                        <constraint firstItem="YQ3-KF-GQr" firstAttribute="centerY" secondItem="0tU-Bn-zx2" secondAttribute="centerY" id="sGY-2G-5bK"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <outlet property="fakeBackgroundView" destination="ybQ-5n-1mh" id="cg0-Rc-Aqj"/>
-                                    <outlet property="mainLabel" destination="1XH-aP-rxe" id="ccF-i5-C17"/>
-                                    <outlet property="secondaryLabel" destination="YQ3-KF-GQr" id="xWa-ez-gg3"/>
+                                    <outlet property="myNewLabel" destination="YQ3-KF-GQr" id="xWa-ez-gg3"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -285,9 +263,6 @@
         <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

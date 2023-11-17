@@ -273,29 +273,32 @@ class LevelsCollectionViewController: UICollectionViewController, RemoteCollecti
     }
 
 
+    // MARK: Delegates
+
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         showLevelFor(indexPath)
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let isLevelCompleted = getCompletedLevels().contains(indexPath.row)
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.aLevelCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.someLevelCell,
+                                                      for: indexPath)
         as! LevelCollectionViewCell
-        cell.mainLabel.text = """
+
+        cell.myNewLabel.text = """
         \(indexPath.row + Const.fakeIndexOffset)
         """
 
         if isLevelCompleted {
-            cell.fakeBackgroundView.backgroundColor = .systemGreen
+            cell.contentView.backgroundColor = .systemGreen
         } else {
-            cell.fakeBackgroundView.backgroundColor = myThemeColor
+            cell.contentView.backgroundColor = myThemeColor
         }
 
-        cell.secondaryLabel.text = "⭐️"
-
-        cell.fakeBackgroundView.layer.cornerRadius = 8
+        cell.contentView.layer.cornerRadius = cell.frame.size.width / 2
 
         cell.accessibilityLabel = "Level \(indexPath.row + Const.fakeIndexOffset)"
 
@@ -303,7 +306,8 @@ class LevelsCollectionViewController: UICollectionViewController, RemoteCollecti
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
         return Const.baseOptions.count
     }
 

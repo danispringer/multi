@@ -10,8 +10,6 @@ import UIKit
 
 class LevelCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var secondaryLabel: UILabel!
-    @IBOutlet weak var fakeBackgroundView: UIView!
+    @IBOutlet weak var myNewLabel: UILabel!
 
 }

@@ -33,13 +33,12 @@ struct Const {
     static let oddMessage = "Odd"
     static let evenMessage = "Even"
     static let shareTitleMessage = "Tell a friend"
-    static let levelsViewController = "LevelsViewController"
-    static let levelsCollectionViewController = "LevelsCollectionViewController"
+    static let myCollectionViewController = "MyCollectionViewController"
     static let aLevelViewController = "aLevelViewController"
     static let tipsViewController = "TipsViewController"
     static let yesMessage = "Yes"
     static let noMessageGame = "Nope"
-    static let aLevelCell = "levelCell"
+    static let someLevelCell = "SomeLevelCell"
     static let tipsCell = "tipsCell"
 
     // MARK: UserDefaults
