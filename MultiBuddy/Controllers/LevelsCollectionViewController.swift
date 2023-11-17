@@ -55,6 +55,7 @@ class LevelsCollectionViewController: UICollectionViewController,
 
     }
 
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -335,10 +336,6 @@ class LevelsCollectionViewController: UICollectionViewController,
 
         return CGSize(width: size, height: size)
     }
-
-
-    // TODO:
-    // return "What Multiples Do You Want to Practice Today?"
 
 
     // MARK: RemoteCollectionReloadDelegate
