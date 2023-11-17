@@ -342,10 +342,7 @@ class LevelsCollectionViewController: UICollectionViewController,
     // MARK: RemoteCollectionReloadDelegate
 
     func myReload() {
-        let myOffset = collectionView.contentOffset
         collectionView.reloadData()
-        collectionView.layoutIfNeeded()
-        collectionView.setContentOffset(myOffset, animated: false)
     }
 
 }
