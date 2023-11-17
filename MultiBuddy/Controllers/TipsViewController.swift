@@ -150,6 +150,10 @@ If the number ends in 0, then it is a multiple of 10.
         self.title = Const.tipsTitle
         self.accessibilityLabel = emojiless(original: Const.tipsTitle)
         tableView.separatorStyle = .none
+
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+
     }
 
 

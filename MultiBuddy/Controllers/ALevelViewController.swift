@@ -116,11 +116,12 @@ class ALevelViewController: UIViewController {
         for num in arrToCustomShuffle where num % myBase == 0 {
             arrToCustomShuffle.append(contentsOf: Array(repeating: num, count: myBase-1))
         }
-
         arrToCustomShuffle.shuffle()
-
         arrToCustomShuffle = arrToCustomShuffle.dropAdjacentDupes()
 
+
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
 
     }
 
@@ -132,6 +133,7 @@ class ALevelViewController: UIViewController {
 
         isMultipleButton.doGlowAnimation(withColor: myThemeColor)
         startPreTimer()
+
     }
 
 
@@ -319,7 +321,7 @@ class ALevelViewController: UIViewController {
                     completedLevelsArray.append("\(levelNumberIndex!)")
                     completedLevelsString = completedLevelsArray.joined(separator: ",")
                     ud.set(completedLevelsString, forKey: Const.completedLevels)
-                    remoteDelegate?.reload()
+                    remoteDelegate?.myReload()
                 }
         }
 

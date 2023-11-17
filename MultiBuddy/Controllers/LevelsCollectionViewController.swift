@@ -10,8 +10,7 @@ import UIKit
 import MessageUI
 
 class LevelsCollectionViewController: UICollectionViewController,
-                                      RemoteCollectionReloadDelegate,
-                                      UICollectionViewDelegateFlowLayout {
+                                      RemoteCollectionReloadDelegate {
 
     // MARK: Outlets
 
@@ -36,13 +35,13 @@ class LevelsCollectionViewController: UICollectionViewController,
 
         tipsButton.addTarget(self, action: #selector(tipsTapped), for: .touchUpInside)
         let tipsItem = UIBarButtonItem(customView: tipsButton)
-
         let aboutItem = UIBarButtonItem(customView: infoButton)
 
         navigationItem.rightBarButtonItems = [aboutItem, tipsItem]
 
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+
     }
 
 
@@ -53,7 +52,6 @@ class LevelsCollectionViewController: UICollectionViewController,
         tipsButton.accessibilityLabel = emojiless(original: Const.tipsTitle)
 
         tipsButton.doGlowAnimation(withColor: myThemeColor)
-        //        navigationController?.navigationBar.prefersLargeTitles = true
 
     }
 
@@ -265,7 +263,7 @@ class LevelsCollectionViewController: UICollectionViewController,
                                 okActionString: "Keep progress")
         let eraseAction = UIAlertAction(title: "Erase progress", style: .destructive) { _ in
             ud.set("", forKey: Const.completedLevels)
-            self.collectionView.reloadData()
+            self.myReload()
         }
         alert.addAction(eraseAction)
         present(alert, animated: true)
@@ -323,7 +321,7 @@ class LevelsCollectionViewController: UICollectionViewController,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let noOfCellsInRow = 5
+        let noOfCellsInRow = 4
 
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
 
@@ -343,15 +341,17 @@ class LevelsCollectionViewController: UICollectionViewController,
 
     // MARK: RemoteCollectionReloadDelegate
 
-    func reload() {
+    func myReload() {
+        let myOffset = collectionView.contentOffset
         collectionView.reloadData()
+        collectionView.layoutIfNeeded()
+        collectionView.setContentOffset(myOffset, animated: false)
     }
-
 
 }
 
 protocol RemoteCollectionReloadDelegate: AnyObject {
-    func reload()
+    func myReload()
 }
 
 
