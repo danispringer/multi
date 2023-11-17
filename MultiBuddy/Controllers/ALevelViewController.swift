@@ -25,7 +25,7 @@ class ALevelViewController: UIViewController {
 
     // MARK: Properties
 
-    weak var remoteDelegate: RemoteTableReloadDelegate?
+    weak var remoteDelegate: RemoteCollectionReloadDelegate?
 
     let timeLeftPre = "Time left: "
     let correctMessages = [

@@ -1,5 +1,5 @@
 //
-//  LevelTableViewCell.swift
+//  LevelCollectionViewCell.swift
 //  MultiBuddy
 //
 //  Created by Daniel Springer on 10/16/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LevelTableViewCell: UITableViewCell {
+class LevelCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!

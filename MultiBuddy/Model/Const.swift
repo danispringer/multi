@@ -34,6 +34,7 @@ struct Const {
     static let evenMessage = "Even"
     static let shareTitleMessage = "Tell a friend"
     static let levelsViewController = "LevelsViewController"
+    static let levelsCollectionViewController = "LevelsCollectionViewController"
     static let aLevelViewController = "aLevelViewController"
     static let tipsViewController = "TipsViewController"
     static let yesMessage = "Yes"

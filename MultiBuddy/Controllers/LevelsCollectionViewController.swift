@@ -1,25 +1,24 @@
 //
-//  LevelsViewController.swift
+//  LevelsCollectionViewController.swift
 //  MultiBuddy
 //
-//  Created by Daniel Springer on 10/16/22.
+//  Created by dani on 11/17/23.
 //  Copyright © 2023 Daniel Springer. All rights reserved.
 //
 
 import UIKit
 import MessageUI
 
-class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
-
+class LevelsCollectionViewController: UICollectionViewController, RemoteCollectionReloadDelegate {
 
     // MARK: Outlets
 
-    @IBOutlet var aboutButton: UIButton!
+    @IBOutlet var infoButton: UIButton!
     @IBOutlet var tipsButton: UIButton!
 
 
     // MARK: Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,15 +27,15 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
             UIView.setAnimationsEnabled(false)
         }
 
-        aboutButton.menu = infoMenu()
-        aboutButton.showsMenuAsPrimaryAction = true
+        infoButton.menu = infoMenu()
+        infoButton.showsMenuAsPrimaryAction = true
 
         setThemeColorTo(myThemeColor: myThemeColor)
 
         tipsButton.addTarget(self, action: #selector(tipsTapped), for: .touchUpInside)
         let tipsItem = UIBarButtonItem(customView: tipsButton)
 
-        let aboutItem = UIBarButtonItem(customView: aboutButton)
+        let aboutItem = UIBarButtonItem(customView: infoButton)
 
         navigationItem.rightBarButtonItems = [aboutItem, tipsItem]
     }
@@ -52,7 +51,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         //        navigationController?.navigationBar.prefersLargeTitles = true
 
     }
-
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -145,51 +143,6 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         return false
     }
 
-
-    // MARK: Delegates
-
-    override func tableView(_ tableView: UITableView,
-                            titleForHeaderInSection section: Int) -> String? {
-        return "What Multiples Do You Want to Practice Today?"
-    }
-
-
-    override func tableView(_ tableView: UITableView,
-                            numberOfRowsInSection section: Int) -> Int {
-        return Const.baseOptions.count
-    }
-
-
-    override func tableView(_ tableView: UITableView,
-                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let isLevelCompleted = getCompletedLevels().contains(indexPath.row)
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: Const.aLevelCell)
-        as! LevelTableViewCell
-        cell.selectionStyle = .none
-        cell.mainLabel.text = """
-        Spot Multiples of \(indexPath.row + Const.fakeIndexOffset)
-        """
-
-        if isLevelCompleted {
-            cell.fakeBackgroundView.backgroundColor = .systemGreen
-        } else {
-            cell.fakeBackgroundView.backgroundColor = myThemeColor
-        }
-
-        cell.secondaryLabel.text = """
-        \(String(repeating: "⭐️", count: indexPath.row + Const.fakeIndexOffset))
-        """
-
-        cell.fakeBackgroundView.layer.cornerRadius = 8
-
-        cell.accessibilityLabel = "Level \(indexPath.row + Const.fakeIndexOffset)"
-
-        return cell
-    }
-
-
     func showLevelFor(_ indexPath: IndexPath) {
         let aLevelVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(
             withIdentifier: Const.aLevelViewController) as! ALevelViewController
@@ -197,13 +150,8 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         let levelMaxNumber = 10 * (indexPath.row + Const.fakeIndexOffset)
         aLevelVC.numbersRange = (indexPath.row + Const.fakeIndexOffset)...levelMaxNumber
         aLevelVC.myBase = indexPath.row + Const.fakeIndexOffset
-        aLevelVC.remoteDelegate = tableView.delegate as? any RemoteTableReloadDelegate
+        aLevelVC.remoteDelegate = collectionView.delegate as? any RemoteCollectionReloadDelegate
         self.navigationController!.pushViewController(aLevelVC, animated: true)
-    }
-
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showLevelFor(indexPath)
     }
 
 
@@ -213,7 +161,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
         let message = Const.appsLink
         let activityController = UIActivityViewController(activityItems: [message],
                                                           applicationActivities: nil)
-        activityController.popoverPresentationController?.sourceView = aboutButton
+        activityController.popoverPresentationController?.sourceView = infoButton
         activityController
             .completionWithItemsHandler = { (_, _: Bool, _: [Any]?, error: Error?) in
                 guard error == nil else {
@@ -311,7 +259,7 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
                                 okActionString: "Keep progress")
         let eraseAction = UIAlertAction(title: "Erase progress", style: .destructive) { _ in
             ud.set("", forKey: Const.completedLevels)
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
         }
         alert.addAction(eraseAction)
         present(alert, animated: true)
@@ -325,21 +273,60 @@ class LevelsViewController: UITableViewController, RemoteTableReloadDelegate {
     }
 
 
-    // MARK: RemoteTableReloadDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        showLevelFor(indexPath)
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let isLevelCompleted = getCompletedLevels().contains(indexPath.row)
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.aLevelCell, for: indexPath)
+        as! LevelCollectionViewCell
+        cell.mainLabel.text = """
+        \(indexPath.row + Const.fakeIndexOffset)
+        """
+
+        if isLevelCompleted {
+            cell.fakeBackgroundView.backgroundColor = .systemGreen
+        } else {
+            cell.fakeBackgroundView.backgroundColor = myThemeColor
+        }
+
+        cell.secondaryLabel.text = "⭐️"
+
+        cell.fakeBackgroundView.layer.cornerRadius = 8
+
+        cell.accessibilityLabel = "Level \(indexPath.row + Const.fakeIndexOffset)"
+
+        return cell
+    }
+
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Const.baseOptions.count
+    }
+
+
+    // TODO:
+    // return "What Multiples Do You Want to Practice Today?"
+
+
+    // MARK: RemoteCollectionReloadDelegate
 
     func reload() {
-        tableView.reloadData()
+        collectionView.reloadData()
     }
+
 
 }
 
-
-protocol RemoteTableReloadDelegate: AnyObject {
+protocol RemoteCollectionReloadDelegate: AnyObject {
     func reload()
 }
 
 
-extension LevelsViewController: MFMailComposeViewControllerDelegate {
+extension LevelsCollectionViewController: MFMailComposeViewControllerDelegate {
 
     func sendEmailTapped() {
         let mailComposeViewController = configuredMailComposeViewController()
@@ -385,7 +372,7 @@ extension LevelsViewController: MFMailComposeViewControllerDelegate {
 }
 
 
-extension LevelsViewController {
+extension LevelsCollectionViewController {
 
 
     func requestReview() {

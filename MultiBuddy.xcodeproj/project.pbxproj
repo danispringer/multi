@@ -12,8 +12,7 @@
 		3319089820E87731007C679C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3319089620E87731007C679C /* LaunchScreen.storyboard */; };
 		3327AD3621DD97B300A0B604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3319088D20E8772E007C679C /* AppDelegate.swift */; };
 		33364BED2906696F00427C5C /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33364BEC2906696F00427C5C /* UIButton+Extensions.swift */; };
-		334453EB28FC0A6200CC00E2 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334453EA28FC0A6200CC00E2 /* LevelsViewController.swift */; };
-		334453ED28FC0EFB00CC00E2 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334453EC28FC0EFB00CC00E2 /* LevelTableViewCell.swift */; };
+		334453ED28FC0EFB00CC00E2 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334453EC28FC0EFB00CC00E2 /* LevelCollectionViewCell.swift */; };
 		3377971D2A15CFC00096EAD8 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3377971C2A15CFC00096EAD8 /* TipsViewController.swift */; };
 		3377971F2A15F16F0096EAD8 /* TipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3377971E2A15F16F0096EAD8 /* TipsTableViewCell.swift */; };
 		3386A10A281A27B5009FCB7F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386A109281A27B5009FCB7F /* UIFont+Extensions.swift */; };
@@ -21,6 +20,7 @@
 		3392B0DC288D114500EE9525 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392B0DB288D114500EE9525 /* UIView+Extensions.swift */; };
 		33CF6B8D26F4434A002E5CA9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CF6B8C26F4434A002E5CA9 /* UIViewController+Extensions.swift */; };
 		33DB100D28EEB051001083A4 /* ALevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB100C28EEB051001083A4 /* ALevelViewController.swift */; };
+		33E273482B073EF9005B4D19 /* LevelsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E273472B073EF9005B4D19 /* LevelsCollectionViewController.swift */; };
 		33E32B9E288B4DA200CED09C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E32B9D288B4DA200CED09C /* Array+Extensions.swift */; };
 		33ECBA0621AC1BAA003199CB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBA0521AC1BAA003199CB /* Const.swift */; };
 		33F3218B28384B2100385BBD /* MultiBuddyScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3218A28384B2100385BBD /* MultiBuddyScreenshots.swift */; };
@@ -47,8 +47,7 @@
 		3319089920E87731007C679C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332FCFE3289B8DE000D3C733 /* MultiBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MultiBuddy.entitlements; sourceTree = "<group>"; };
 		33364BEC2906696F00427C5C /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
-		334453EA28FC0A6200CC00E2 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
-		334453EC28FC0EFB00CC00E2 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
+		334453EC28FC0EFB00CC00E2 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
 		3377971C2A15CFC00096EAD8 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		3377971E2A15F16F0096EAD8 /* TipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTableViewCell.swift; sourceTree = "<group>"; };
 		3386A109281A27B5009FCB7F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		3392B0DB288D114500EE9525 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		33CF6B8C26F4434A002E5CA9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		33DB100C28EEB051001083A4 /* ALevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALevelViewController.swift; sourceTree = "<group>"; };
+		33E273472B073EF9005B4D19 /* LevelsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCollectionViewController.swift; sourceTree = "<group>"; };
 		33E32B9D288B4DA200CED09C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		33ECBA0521AC1BAA003199CB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		33F3218828384B2100385BBD /* MultiBuddyScreenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiBuddyScreenshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +134,7 @@
 		3340755820E8C33500EFDAA9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				334453EA28FC0A6200CC00E2 /* LevelsViewController.swift */,
+				33E273472B073EF9005B4D19 /* LevelsCollectionViewController.swift */,
 				33DB100C28EEB051001083A4 /* ALevelViewController.swift */,
 				3377971C2A15CFC00096EAD8 /* TipsViewController.swift */,
 			);
@@ -144,7 +144,7 @@
 		33423D1F22DE50AF00149D40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				334453EC28FC0EFB00CC00E2 /* LevelTableViewCell.swift */,
+				334453EC28FC0EFB00CC00E2 /* LevelCollectionViewCell.swift */,
 				3377971E2A15F16F0096EAD8 /* TipsTableViewCell.swift */,
 			);
 			path = View;
@@ -331,8 +331,8 @@
 				33DB100D28EEB051001083A4 /* ALevelViewController.swift in Sources */,
 				33364BED2906696F00427C5C /* UIButton+Extensions.swift in Sources */,
 				3327AD3621DD97B300A0B604 /* AppDelegate.swift in Sources */,
-				334453EB28FC0A6200CC00E2 /* LevelsViewController.swift in Sources */,
-				334453ED28FC0EFB00CC00E2 /* LevelTableViewCell.swift in Sources */,
+				33E273482B073EF9005B4D19 /* LevelsCollectionViewController.swift in Sources */,
+				334453ED28FC0EFB00CC00E2 /* LevelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
