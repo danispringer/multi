@@ -72,6 +72,8 @@ class LevelsCollectionViewController: UICollectionViewController,
             ud.set(true, forKey: Const.userSawSplash)
         }
 
+        collectionView.flashScrollIndicators()
+
     }
 
 
