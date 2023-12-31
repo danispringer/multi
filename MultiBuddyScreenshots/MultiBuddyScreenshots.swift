@@ -3,7 +3,7 @@
 //  MultiBuddyScreenshots
 //
 //  Created by Daniel Springer on 5/20/22.
-//  Copyright © 2023 Daniel Springer. All rights reserved.
+//  Copyright © 2024 Daniel Springer. All rights reserved.
 //
 
 import XCTest
