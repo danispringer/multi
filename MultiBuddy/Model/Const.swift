@@ -15,12 +15,19 @@ let isVOOn = UIAccessibility.isVoiceOverRunning
 
 struct Const {
 
+    struct API {
+        static let key = "exhaust"
+        static let code = "baubles"
+        static let user = "@"
+        static let password = "_01"
+    }
+
     static let appVersion = "CFBundleShortVersionString"
     static let version = "v."
     static let appName = "MultiBuddy"
     static let contact = "Email me"
     static let reset = "Erase progress"
-    static let emailString = "00.segue_affix@icloud.com"
+    static let apple = "icloud.com"
     static let cancel = "Cancel"
     static let leaveReview = "Leave a review"
     static let reviewLink = "https://apps.apple.com/app/id6449202900?action=write-review"
