@@ -374,8 +374,6 @@ extension LevelsCollectionViewController: MFMailComposeViewControllerDelegate {
         Const.API.user +
         Const.apple
 
-        print(recipient)
-
         mailComposerVC.setToRecipients([recipient])
 
         let version: String? = Bundle.main.infoDictionary![Const.appVersion] as? String
